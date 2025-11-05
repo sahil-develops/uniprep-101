@@ -1,0 +1,221 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+
+const Footer = () => {
+  return (
+    <footer className="bg-[#0A2342] text-white py-12 sm:py-16 lg:py-8 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        {/* Logo and Tagline */}
+        <div className="text-center mb-10 sm:mb-12 lg:mb-16">
+          <div className="flex justify-center mb-4">
+            <Image
+              src="/logo.svg"
+              alt="UNIPREP101 Logo"
+              width={241}
+              height={57}
+              className="h-auto"
+            />
+          </div>
+          <p className="text-sm sm:text-base text-white max-w-2xl mx-auto">
+            Preparing students for global opportunities through Singapore education
+          </p>
+        </div>
+
+        {/* Links and Contact Section */}
+        <div className="flex flex-row items-start justify-around gap-8 sm:gap-0 mb-10 sm:mb-12 lg:mb-16">
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-lg sm:text-xl font-bold text-white mb-4 sm:mb-6">
+              Quick Links
+            </h3>
+            <ul className="space-y-3 sm:space-y-4">
+              <li>
+                <Link
+                  href="#"
+                  className="text-sm sm:text-base text-white hover:text-primary transition-colors"
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#courses"
+                  className="text-sm sm:text-base text-white hover:text-primary transition-colors"
+                >
+                  Courses
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#programs"
+                  className="text-sm sm:text-base text-white hover:text-primary transition-colors"
+                >
+                  STEM Prep
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#programs"
+                  className="text-sm sm:text-base text-white hover:text-primary transition-colors"
+                >
+                  Business Prep
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#about"
+                  className="text-sm sm:text-base text-white hover:text-primary transition-colors"
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#faq"
+                  className="text-sm sm:text-base text-white hover:text-primary transition-colors"
+                >
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#inquire"
+                  className="text-sm sm:text-base text-white hover:text-primary transition-colors"
+                >
+                  Inquire
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-4 sm:mb-6">
+                Contact
+            </h3>
+            <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+              <p className="text-sm sm:text-base text-white">
+                <a
+                  href="mailto:info@uniprep101.com"
+                  className="hover:text-primary transition-colors"
+                >
+                  info@uniprep101.com
+                </a>
+              </p>
+              <p className="text-sm sm:text-base text-white">
+           
+                <a
+                  href="tel:+6565166666"
+                  className="hover:text-primary transition-colors"
+                >
+                  +65 6516 6666 (Singapore)
+                </a>
+              </p>
+            </div>
+
+            {/* Social Media Icons */}
+            <div className="flex items-center gap-4 sm:gap-6">
+              {/* LinkedIn */}
+              <a
+                href="https://www.linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-primary transition-colors"
+                aria-label="LinkedIn"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="w-6 h-6"
+                >
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+
+              {/* Instagram */}
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-primary transition-colors"
+                aria-label="Instagram"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="w-6 h-6"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                </svg>
+              </a>
+
+              {/* Facebook */}
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-primary transition-colors"
+                aria-label="Facebook"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="w-6 h-6"
+                >
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Copyright and Legal Links */}
+        <div className=" pt-8 sm:pt-0 text-center">
+          <p className="text-sm sm:text-base text-white mb-4">
+            © 2025 Uniprep101. All rights reserved.
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+            <Link
+              href="#privacy"
+              className="text-sm sm:text-base text-white hover:text-primary transition-colors"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              href="#terms"
+              className="text-sm sm:text-base text-white hover:text-primary transition-colors"
+            >
+              Terms of Service
+            </Link>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

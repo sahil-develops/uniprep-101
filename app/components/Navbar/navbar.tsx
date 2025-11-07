@@ -109,8 +109,10 @@ export default function Navbar() {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 z-[60] md:hidden transition-transform duration-300 ease-in-out ${
-          isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`fixed inset-0 z-60 md:hidden transition-transform duration-300 ease-in-out ${
+          isMobileMenuOpen
+            ? 'translate-x-0 pointer-events-auto'
+            : 'translate-x-full pointer-events-none'
         }`}
         onClick={closeMobileMenu}
       >

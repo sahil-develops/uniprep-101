@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 
+import CTA from "../CTA/cta";
+
 const testimonials = [
   {
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
@@ -26,44 +28,59 @@ const testimonials = [
   },
 ];
 
-const Testimonials = () => {
+interface TestimonialsProps {
+  withBackground?: boolean;
+}
+
+const Testimonials = ({ withBackground = false }: TestimonialsProps) => {
   return (
-    <section className="relative bg-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Section Title */}
-        {/* <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-900 mb-8 sm:mb-12">
-          Student{" "}
-          <span className="bg-primary px-4 py-2 inline-block">
-            Testimonials
-          </span>
-        </h2> */}
-
-<h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-neutral-900 mb-8 sm:mb-12">
-Student {" "}
-          <span className="relative inline-block font-bold">
-            <span className="relative z-10">Testimonials {' '}</span>
-            <span className="absolute  left-0 right-0 h-5 z-0 bg-[#FDEC04] -bottom-1 "></span>
-          </span>
-          {/* <Image src="/OrangeLine.svg" alt="arrow-down" className='w-full h-full absolute' width={20} height={20} /> */}
-        </h1>
-
-        {/* Testimonials Cards */}
-        <div className="space-y-6 sm:space-y-4">
-          {testimonials.map((testimonial, index) => (
-            <TestimonialCard
-              key={index}
-              testimonial={{
-                ...testimonial,
-                bootcampColor:
-                  testimonial.bootcampColor === "blue" || testimonial.bootcampColor === "orange"
-                    ? testimonial.bootcampColor
-                    : "blue", // fallback in case of invalid value
-              }}
-            />
-          ))}
+    <div className={`relative ${withBackground ? "overflow-hidden pt-10" : "bg-[#F7F3E3] "}`}>
+      {withBackground && (
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="/bg-testomonials.webp"
+            alt="Testimonials background"
+            fill
+            priority
+            className="object-cover"
+          />
+          {/* <div className="absolute inset-0 bg-[#fdf9f1]/90" /> */}
         </div>
-      </div>
-    </section>
+      )}
+
+      <section className="relative bg-transparent py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-neutral-900 mb-8 sm:mb-12">
+            {!withBackground && (
+              <>Student{" "}</>
+              )}
+            <span className="relative inline-block font-bold">
+                <span className="relative z-10">Testimonials {" "}</span>
+                {!withBackground && (
+                  <span className="absolute  left-0 right-0 h-5 z-0 bg-[#FDEC04] -bottom-1 "></span>
+                )}
+              </span>
+            </h1>
+
+          {/* Testimonials Cards */}
+          <div className="space-y-6 sm:space-y-4">
+            {testimonials.map((testimonial, index) => (
+              <TestimonialCard
+                key={index}
+                testimonial={{
+                  ...testimonial,
+                  bootcampColor:
+                    testimonial.bootcampColor === "blue" || testimonial.bootcampColor === "orange"
+                      ? testimonial.bootcampColor
+                      : "blue",
+                }}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+      <CTA />
+    </div>
   );
 };
 

@@ -292,8 +292,8 @@ const DayCard = ({ day, index, isExpanded, onToggle }: DayCardProps) => {
                 <li key={idx} className="flex items-start gap-3">
                   <div className="shrink-0 w-5 h-5  flex items-center justify-center mt-0.5">
                   <svg className='w-5 h-5' viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="0.833333" y="0.833333" width="18.3333" height="18.3333" rx="9.16667" stroke="#FF6600" stroke-width="1.66667"/>
-<path d="M14.1666 6.66663L8.43742 12.5L5.83325 9.84844" stroke="#FF6600" stroke-width="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
+<rect x="0.833333" y="0.833333" width="18.3333" height="18.3333" rx="9.16667" stroke="#FF6600" strokeWidth="1.66667"/>
+<path d="M14.1666 6.66663L8.43742 12.5L5.83325 9.84844" stroke="#FF6600" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
 
                   </div>
@@ -389,8 +389,8 @@ const DayCard = ({ day, index, isExpanded, onToggle }: DayCardProps) => {
                   <div className="shrink-0 w-5 h-5 rounded-full  flex items-start justify-start mt-0.5">
                     
                   <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="0.833333" y="0.833333" width="22.3333" height="22.3333" rx="11.1667" stroke="#E35F30" stroke-width="1.66667"/>
-<path d="M17 8L10.125 15L7 11.8182" stroke="#E35F30" stroke-width="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
+<rect x="0.833333" y="0.833333" width="22.3333" height="22.3333" rx="11.1667" stroke="#E35F30" strokeWidth="1.66667"/>
+<path d="M17 8L10.125 15L7 11.8182" stroke="#E35F30" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
 
                   </div>

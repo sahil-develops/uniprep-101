@@ -30,4 +30,14 @@ body {
   }
 }
 
+.about-bootcamps-swiper .swiper-pagination-bullet {
+  background-color: rgba(10, 20, 49, 0.3);
+  opacity: 1;
+  transition: opacity 150ms ease;
+}
+
+.about-bootcamps-swiper .swiper-pagination-bullet-active {
+  background-color: #0A1431;
+}
+
 

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
-export default function Navbar() {
+export default function Navbar({ color = 'white' }: { color?: 'white' | 'black' }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -45,7 +45,7 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className="absolute inset-x-0 top-0 z-50 bg-transparent transition-colors duration-300 hover:bg-navy"
+        className="absolute inset-x-0 top-0 z-50 bg-transparent transition-colors duration-300  "
       >
         <div className="lg:mx-auto w-full lg:max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-20 items-start lg:items-center justify-between py-4 lg:py-0">
@@ -55,13 +55,13 @@ export default function Navbar() {
               <div className="hidden items-center gap-6 md:flex">
                 <a
                   href="#courses"
-                  className="text-sm font-medium text-white transition-colors hover:text-primary"
+                  className={`text-sm font-medium ${color === 'white' ? 'text-white' : 'text-navy'}  transition-colors `}
                 >
                   Courses
                 </a>
                 <a
                   href="#about"
-                  className="text-sm font-medium text-white transition-colors hover:text-primary"
+                  className={`text-sm font-medium ${color === 'white' ? 'text-white hover:text-primary' : 'text-navy hover:text-primary'} transition-colors `}
                 >
                   About Us
                 </a>
@@ -81,7 +81,7 @@ export default function Navbar() {
             <div className="flex items-center gap-6">
               <a
                 href="#faq"
-                className="hidden text-sm font-medium text-white transition-colors hover:text-primary md:block"
+                className={`hidden text-sm font-medium ${color === 'white' ? 'text-white' : 'text-navy'} transition-colors hover:text-primary md:block`}
               >
                 FAQ
               </a>
@@ -98,9 +98,9 @@ export default function Navbar() {
                 className="flex flex-col gap-1.5 p-2 md:hidden"
                 aria-label="Toggle mobile menu"
               >
-                <span className={`h-0.5 w-6 bg-white transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-                <span className={`h-0.5 w-6 bg-white transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
-                <span className={`h-0.5 w-6 bg-white transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+                <span className={`h-0.5 w-6 ${color === 'white' ? 'bg-white' : 'bg-navy'} transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+                <span className={`h-0.5 w-6 ${color === 'white' ? 'bg-white' : 'bg-navy'} transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
+                <span className={`h-0.5 w-6 ${color === 'white' ? 'bg-white' : 'bg-navy'} transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
               </button>
             </div>
           </div>

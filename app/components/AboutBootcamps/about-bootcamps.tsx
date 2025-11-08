@@ -33,10 +33,10 @@ const slides = [
 export default function AboutBootcamps() {
   return (
     <section className="bg-[#F7F3E3] py-20">
-      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between gap-6">
+      <div className="mx-auto flex max-w-7xl flex-col gap-10 px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-center gap-6">
           <div>
-            <h2 className="text-3xl font-semibold text-[#0A1431] sm:text-4xl">
+            <h2 className="text-center text-2xl  font-bold text-[#0A1431] sm:text-4xl">
               How Our Bootcamps Work
             </h2>
        
@@ -44,7 +44,7 @@ export default function AboutBootcamps() {
         
         </div>
 
-        <div className="relative">
+        <div className="relative lg:ml-0 ml-10">
           <Swiper
             modules={[Navigation, Pagination, A11y]}
             navigation={{
@@ -58,10 +58,10 @@ export default function AboutBootcamps() {
             centeredSlidesBounds
             breakpoints={{
               640: {
-                slidesPerView: 1,
+                slidesPerView: 2,
                 centeredSlides: true,
                 centeredSlidesBounds: true,
-                spaceBetween: 20,
+                spaceBetween: 40,
               },
               768: {
                 slidesPerView: 1,

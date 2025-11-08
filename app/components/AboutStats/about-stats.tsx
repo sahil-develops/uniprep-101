@@ -38,7 +38,7 @@ const stats = [
 export default function AboutStats() {
   return (
     <section className="bg-linear-to-tr from-white  to-[#C9E1FF]  py-20">
-      <div className="mx-auto max-w-6xl px-4 text-center sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
         {/* <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary">Our impact</p> */}
         <h2 className="mt-4 text-3xl font-bold text-[#0A1431] sm:text-4xl">Our Impact in Numbers</h2>
         <p className="mx-auto mt-6 max-w-3xl text-lg text-[#35436B]">

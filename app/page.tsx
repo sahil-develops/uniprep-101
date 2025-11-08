@@ -16,7 +16,7 @@ export default function Home() {
         <Marquee />
         <Programs />
         <Testimonials />
-        <CTA />
+        {/* <CTA /> */}
         <Footer />
       </main>
     </>

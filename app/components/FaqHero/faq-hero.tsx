@@ -146,18 +146,16 @@ export default function FaqHero() {
         sizes="100vw"
       />
 
-      <div className="absolute inset-0 -z-10 bg-[#03163E]/80" />
-      <div className="absolute inset-0 -z-10 bg-linear-to-b from-[#101E46]/60 via-transparent to-[#03091B]/80" />
+      <div className="absolute inset-0 -z-10 bg-[#03163E]/70" />
+      {/* <div className="absolute inset-0 -z-10 bg-linear-to-b from-[#101E46]/40 via-transparent to-[#03091B]/20" /> */}
 
-      <div className="relative mx-auto flex w-full max-w-5xl flex-col gap-12 px-4 text-white sm:px-6 lg:px-8">
+      <div className="relative mx-auto flex w-full max-w-5xl flex-col gap-5 px-4 text-white sm:px-6 lg:px-8">
         <header className="text-center">
         
-          <h1 className="mt-4 text-3xl font-semibold leading-tight md:text-4xl lg:text-5xl">
-            Everything you need to know before joining the program
+          <h1 className="mt-4 text-3xl font-bold leading-tight md:text-4xl lg:text-5xl">
+  FAQ
           </h1>
-          <p className="mt-4 text-base text-white/80 md:text-lg">
-            Can’t find what you’re looking for? Reach out to our team and we'll guide you through the details.
-          </p>
+      
         </header>
 
         {/* Desktop / Tablet Cards */}

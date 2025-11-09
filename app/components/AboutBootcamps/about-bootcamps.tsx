@@ -39,9 +39,7 @@ export default function AboutBootcamps() {
           <h2 className="text-balance text-2xl font-bold text-[#0A1431] sm:text-4xl lg:text-5xl">
             How Our Bootcamps Work
           </h2>
-          <p className="mt-3 max-w-2xl text-pretty text-sm text-[#35436B] sm:text-base lg:text-lg">
-            Four signature pillars guide each learner journey, blending academic rigor with real-world momentum.
-          </p>
+     
         </div>
 
         <div className="relative">

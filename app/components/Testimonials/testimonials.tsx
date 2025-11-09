@@ -131,7 +131,7 @@ const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
               {testimonial.name}
             </h3>
             <div className="flex items-center gap-2">
-              <p className="text-xs sm:text-base text-nowrap text-neutral-600">
+              <p className="text-[10px] sm:text-base text-nowrap text-neutral-600">
                 Student: {testimonial.university}
               </p>
               {testimonial.logoSrc && (
@@ -153,7 +153,7 @@ const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
         {testimonial.bootcamp && (
           <div className="shrink-0">
             <span
-              className="inline-block px-3 py-2 rounded-full text-white text-xs sm:text-baseline font-semibold whitespace-nowrap"
+              className="inline-block px-3 py-2 rounded-full text-white text-[9px] sm:text-baseline font-semibold whitespace-nowrap"
               style={{ backgroundColor: bootcampBgColor }}
             >
               {testimonial.bootcamp}

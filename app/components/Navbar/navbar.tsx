@@ -59,12 +59,12 @@ export default function Navbar({ color = 'white' }: { color?: 'white' | 'black' 
                 >
                   Courses
                 </a>
-                <a
-                  href="#about"
+                <Link
+                  href="/about-us"
                   className={`text-sm font-medium ${color === 'white' ? 'text-white hover:text-primary' : 'text-navy hover:text-primary'} transition-colors `}
                 >
                   About Us
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -79,12 +79,12 @@ export default function Navbar({ color = 'white' }: { color?: 'white' | 'black' 
 
             {/* Right Navigation */}
             <div className="flex items-center gap-6">
-              <a
-                href="#faq"
+              <Link
+                href="/faq"
                 className={`hidden text-sm font-medium ${color === 'white' ? 'text-white' : 'text-navy'} transition-colors hover:text-primary md:block`}
               >
                 FAQ
-              </a>
+              </Link>
               <a
                 href="#signup"
                 className="hidden rounded-lg bg-primary px-6 py-2 text-sm font-semibold uppercase text-white transition-colors hover:bg-primary/90 md:block"
@@ -166,27 +166,27 @@ export default function Navbar({ color = 'white' }: { color?: 'white' | 'black' 
                 >
                   Courses
                 </a>
-                <a
-                  href="#about"
+                <Link
+                  href="/about-us"
                   onClick={closeMobileMenu}
                   className="text-xl font-medium text-navy transition-colors hover:text-navy/80"
                 >
                   About Us
-                </a>
-                <a
-                  href="#faq"
+                </Link>
+                <Link
+                  href="/faq"
                   onClick={closeMobileMenu}
                   className="text-xl font-medium text-navy transition-colors hover:text-navy/80"
                 >
                   FAQ
-                </a>
-                <a
-                  href="#testimonials"
+                </Link>
+                <Link
+                    href="/testimonials"
                   onClick={closeMobileMenu}
                   className="text-xl font-medium text-navy transition-colors hover:text-navy/80"
                 >
                   Testimonials
-                </a>
+                </Link>
               </div>
 
               {/* Apply Now Button */}

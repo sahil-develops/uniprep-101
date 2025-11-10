@@ -33,7 +33,7 @@ const Footer = () => {
             <ul className="space-y-3 sm:space-y-4">
               <li>
                 <Link
-                  href="#"
+                  href="/"
                   className="text-sm sm:text-base text-white hover:text-primary transition-colors"
                 >
                   Home
@@ -49,7 +49,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="#programs"
+                  href="/stem-prep"
                   className="text-sm sm:text-base text-white hover:text-primary transition-colors"
                 >
                   STEM Prep
@@ -65,7 +65,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="#about"
+                  href="/about-us"
                   className="text-sm sm:text-base text-white hover:text-primary transition-colors"
                 >
                   About Us
@@ -73,7 +73,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="#faq"
+                  href="/faq"
                   className="text-sm sm:text-base text-white hover:text-primary transition-colors"
                 >
                   FAQ
@@ -81,7 +81,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="#inquire"
+                  href="/register"
                   className="text-sm sm:text-base text-white hover:text-primary transition-colors"
                 >
                   Inquire
@@ -200,13 +200,13 @@ const Footer = () => {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
             <Link
-              href="#privacy"
+              href="/privacy-policy"
               className="text-sm sm:text-base text-white hover:text-primary transition-colors"
             >
               Privacy Policy
             </Link>
             <Link
-              href="#terms"
+              href="/terms-of-service"
               className="text-sm sm:text-base text-white hover:text-primary transition-colors"
             >
               Terms of Service

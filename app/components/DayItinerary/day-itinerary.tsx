@@ -42,7 +42,7 @@ const dayItineraryData: DayItineraryItem[] = [
       "Ice-breaking activities with cohort",
         "Singapore city orientation walk"
     ],
-    imageSrc: "/itenary-2.webp",
+    imageSrc: "/Itenary-2.webp",
     imageAlt: "Students in industry exposure session",
     imagePosition: "left"
   },
@@ -58,7 +58,7 @@ const dayItineraryData: DayItineraryItem[] = [
       "Ice-breaking activities with cohort",
       "Singapore city orientation walk"
     ],
-    imageSrc: "/itenary-3.webp",
+    imageSrc: "/Itenary-3.webp",
     imageAlt: "Students in hands-on workshop",
     imagePosition: "right"
   },
@@ -74,7 +74,7 @@ const dayItineraryData: DayItineraryItem[] = [
       "Ice-breaking activities with cohort",
       "Singapore city orientation walk"
     ],
-    imageSrc: "/itenary-4.webp",
+    imageSrc: "/Itenary-4.webp",
     imageAlt: "Students in industry exposure session",
     imagePosition: "left"
   },
@@ -90,7 +90,7 @@ const dayItineraryData: DayItineraryItem[] = [
       "Ice-breaking activities with cohort",
       "Singapore city orientation walk"
     ],
-    imageSrc: "/itenary-5.webp",
+    imageSrc: "/Itenary-5.webp",
     imageAlt: "Students in hands-on workshop",
     imagePosition: "right"
   },
@@ -106,7 +106,7 @@ const dayItineraryData: DayItineraryItem[] = [
       "Ice-breaking activities with cohort",
       "Singapore city orientation walk"
     ],
-    imageSrc: "/itenary-6.webp",
+    imageSrc: "/Itenary-6.webp",
     imageAlt: "Students in industry exposure session",
     imagePosition: "left"
   },
@@ -122,7 +122,7 @@ const dayItineraryData: DayItineraryItem[] = [
       "Ice-breaking activities with cohort",  
       "Singapore city orientation walk"
     ],
-    imageSrc: "/itenary-7.webp",
+    imageSrc: "/Itenary-7.webp",
     imageAlt: "Students in industry exposure session",
     imagePosition: "left"
   },
@@ -138,7 +138,7 @@ const dayItineraryData: DayItineraryItem[] = [
       "Ice-breaking activities with cohort",  
       "Singapore city orientation walk"
     ],
-    imageSrc: "/itenary-8.webp",
+    imageSrc: "/Itenary-8.webp",
     imageAlt: "Students in industry exposure session",
     imagePosition: "left"
   }

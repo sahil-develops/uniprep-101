@@ -1,6 +1,6 @@
-"use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const CTA = () => {
   return (
@@ -35,14 +35,18 @@ const CTA = () => {
         {/* CTA Buttons */}
         <div className="flex flex-row items-center justify-center gap-4 sm:gap-6">
           {/* View Courses Button - Outlined */}
+          <Link href="/our-programs" className="w-full sm:w-auto">
           <button className="px-8 cursor-pointer sm:px-10 py-3 sm:py-4 rounded-lg text-white text-base sm:text-lg font-medium border border-white bg-transparent hover:bg-white/10 transition-colors duration-200 w-full sm:w-auto">
             View Courses
           </button>
+          </Link>
 
           {/* Apply Now Button - Solid Orange */}
+          <Link href="/register" className="w-full sm:w-auto">
           <button className="px-8 cursor-pointer sm:px-10 py-3 sm:py-4 rounded-lg text-white text-base sm:text-lg font-medium bg-primary hover:opacity-90 transition-opacity duration-200 w-full sm:w-auto">
             Apply now
           </button>
+          </Link>
         </div>
       </div>
     </section>

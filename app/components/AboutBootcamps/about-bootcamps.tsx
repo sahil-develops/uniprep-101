@@ -31,6 +31,21 @@ const slides = [
   },
 ];
 
+const groupedSlides = [slides.slice(0, 2), slides.slice(2)];
+
+const SlideCard = ({ title, description }: { title: string; description: string }) => (
+  <article className="mx-auto flex h-full max-w-[340px] flex-col justify-center px-1 sm:max-w-[380px] md:max-w-[420px] lg:max-w-[520px] xl:max-w-[560px]">
+    <div className="card-gradient-wrapper relative isolation-auto rounded-[28px] p-[3px] sm:rounded-[36px] sm:p-[4px]">
+      <div className="h-full rounded-[24px] bg-white px-6 py-8 text-center shadow-[0_18px_45px_-28px_rgba(10,20,49,0.45)] sm:rounded-[32px] sm:px-8 sm:py-10">
+        <h3 className="text-xl font-semibold text-[#0A1431] sm:text-3xl">{title}</h3>
+        <p className="mt-4 text-sm leading-6 text-[#35436B] sm:mt-6 sm:text-lg sm:leading-7">
+          {description}
+        </p>
+      </div>
+    </div>
+  </article>
+);
+
 export default function AboutBootcamps() {
   return (
     <section className="bg-[#F7F3E3] py-20">
@@ -42,7 +57,7 @@ export default function AboutBootcamps() {
      
         </div>
 
-        <div className="relative">
+        <div className="relative lg:hidden">
           <Swiper
             modules={[Navigation, Pagination, A11y]}
             pagination={{ clickable: true, el: '.about-bootcamps-pagination' }}
@@ -73,23 +88,37 @@ export default function AboutBootcamps() {
           >
             {slides.map((slide) => (
               <SwiperSlide key={slide.title} className="h-auto!">
-                <article className="mx-auto flex h-full max-w-[340px] flex-col justify-center px-1 sm:max-w-[380px] md:max-w-[420px] lg:max-w-[520px] xl:max-w-[560px]">
-                  <div className="card-gradient-wrapper relative isolation-auto rounded-[28px] p-[3px] sm:rounded-[36px] sm:p-[4px]">
-                    <div className="h-full rounded-[24px] bg-white px-6 py-8 text-center shadow-[0_18px_45px_-28px_rgba(10,20,49,0.45)] sm:rounded-[32px] sm:px-8 sm:py-10">
-                      <h3 className="text-xl font-semibold text-[#0A1431] sm:text-3xl">
-                        {slide.title}
-                      </h3>
-                      <p className="mt-4 text-sm leading-6 text-[#35436B] sm:mt-6 sm:text-lg sm:leading-7">
-                        {slide.description}
-                      </p>
-                    </div>
-                  </div>
-                </article>
+                <SlideCard title={slide.title} description={slide.description} />
               </SwiperSlide>
             ))}
           </Swiper>
 
           <div className="about-bootcamps-pagination mt-10 flex items-center justify-center gap-3" />
+        </div>
+
+        <div className="relative hidden lg:block">
+          <Swiper
+            modules={[Navigation, Pagination, A11y]}
+            pagination={{ clickable: true, el: '.about-bootcamps-pagination-desktop' }}
+            spaceBetween={32}
+            slidesPerView={1}
+            grabCursor
+            className="about-bootcamps-swiper-desktop"
+          >
+            {groupedSlides
+              .filter((group) => group.length > 0)
+              .map((group, index) => (
+              <SwiperSlide key={`group-${index}`} className="h-auto!">
+                <div className="flex items-stretch justify-center gap-6">
+                  {group.map((slide) => (
+                    <SlideCard key={slide.title} title={slide.title} description={slide.description} />
+                  ))}
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
+          <div className="about-bootcamps-pagination-desktop mt-12 flex items-center justify-center gap-3" />
         </div>
       </div>
 
@@ -98,11 +127,24 @@ export default function AboutBootcamps() {
           padding-bottom: 3.25rem;
         }
 
+        .about-bootcamps-swiper-desktop {
+          padding-bottom: 4rem;
+        }
+
         .about-bootcamps-swiper .swiper-wrapper {
           align-items: stretch;
         }
 
         .about-bootcamps-swiper .swiper-slide {
+          display: flex;
+          justify-content: center;
+        }
+
+        .about-bootcamps-swiper-desktop .swiper-wrapper {
+          align-items: stretch;
+        }
+
+        .about-bootcamps-swiper-desktop .swiper-slide {
           display: flex;
           justify-content: center;
         }
@@ -118,6 +160,24 @@ export default function AboutBootcamps() {
         }
 
         .about-bootcamps-pagination .swiper-pagination-bullet-active {
+          width: 10px;
+          height: 10px;
+          border-radius: 9999px;
+          background: #000;
+          transform: translateY(-1px);
+        }
+
+        .about-bootcamps-pagination-desktop .swiper-pagination-bullet {
+          height: 10px;
+          width: 10px;
+          border-radius: 9999px;
+          background: #cdd3e6;
+          opacity: 1;
+          transition: transform 0.2s ease, background-color 0.2s ease,
+            width 0.2s ease;
+        }
+
+        .about-bootcamps-pagination-desktop .swiper-pagination-bullet-active {
           width: 10px;
           height: 10px;
           border-radius: 9999px;
@@ -143,7 +203,7 @@ export default function AboutBootcamps() {
         }
 
         @media (min-width: 1280px) {
-          .about-bootcamps-swiper {
+          .about-bootcamps-swiper-desktop {
             padding-bottom: 4.5rem;
           }
         }

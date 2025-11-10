@@ -85,12 +85,12 @@ export default function Navbar({ color = 'white' }: { color?: 'white' | 'black' 
               >
                 FAQ
               </Link>
-              <a
-                href="#signup"
+              <Link
+                href="/register"
                 className="hidden rounded-lg bg-primary px-6 py-2 text-sm font-semibold uppercase text-white transition-colors hover:bg-primary/90 md:block"
               >
                 Sign Up
-              </a>
+              </Link>
               
               {/* Mobile Menu Button (Hamburger) */}
               <button

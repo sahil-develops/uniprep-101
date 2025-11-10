@@ -42,7 +42,7 @@ const dayItineraryData: DayItineraryItem[] = [
       "Ice-breaking activities with cohort",
         "Singapore city orientation walk"
     ],
-    imageSrc: "/Itenary-2.webp",
+    imageSrc: "/itenary-2.webp",
     imageAlt: "Students in industry exposure session",
     imagePosition: "left"
   },
@@ -124,7 +124,7 @@ const dayItineraryData: DayItineraryItem[] = [
     ],
     imageSrc: "/Itenary-7.webp",
     imageAlt: "Students in industry exposure session",
-    imagePosition: "left"
+    imagePosition: "right"
   },
   {
     dayTitle: "Day 8: Industry Exposure",

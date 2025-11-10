@@ -41,7 +41,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="#courses"
+                  href="/our-programs"
                   className="text-sm sm:text-base text-white hover:text-primary transition-colors"
                 >
                   Courses

@@ -167,7 +167,8 @@ const ProgramCard = ({ data,program  }: ProgramCardProps) => {
 
         {/* Call to Action Buttons */}
         <div className="mb-6 flex flex-col items-center justify-between gap-4">
-          <button className="w-full sm:w-auto text-lg sm:text-xl bg-primary hover:opacity-90 text-white font-medium lg:px-12 py-2 rounded-lg flex items-center justify-center gap-2 transition-opacity duration-200 mb-0">
+          <Link href="/register">
+          <button className="w-full cursor-pointer sm:w-auto text-lg sm:text-xl bg-primary hover:opacity-90 text-white font-medium lg:px-12 py-2 rounded-lg flex items-center justify-center gap-2 transition-opacity duration-200 mb-0">
             Register Interest
             <svg className="w-5 h-5" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M5.19165 12.4601H19.7282" stroke="white" strokeWidth="3.11498" strokeLinecap="round" strokeLinejoin="round"/>
@@ -175,6 +176,7 @@ const ProgramCard = ({ data,program  }: ProgramCardProps) => {
 </svg>
 
           </button>
+          </Link>
 
           <Link
             href="/stem-prep"

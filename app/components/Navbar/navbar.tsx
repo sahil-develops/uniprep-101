@@ -152,20 +152,20 @@ export default function Navbar({ color = 'white' }: { color?: 'white' | 'black' 
             {/* Menu Items */}
             <nav className="flex flex-1 flex-col px-8 py-8">
               <div className="flex flex-col gap-8">
-                <a
-                  href="#"
+                <Link
+                  href="/"
                   onClick={closeMobileMenu}
                   className="text-xl font-medium text-navy transition-colors hover:text-navy/80"
                 >
                   Home
-                </a>
-                <a
-                  href="#courses"
+                </Link>
+                <Link
+                  href="/our-programs"
                   onClick={closeMobileMenu}
                   className="text-xl font-medium text-navy transition-colors hover:text-navy/80"
                 >
                   Courses
-                </a>
+                </Link>
                 <Link
                   href="/about-us"
                   onClick={closeMobileMenu}
@@ -191,8 +191,8 @@ export default function Navbar({ color = 'white' }: { color?: 'white' | 'black' 
 
               {/* Apply Now Button */}
               <div className="mt-auto pb-8">
-                <a
-                  href="#signup"
+                <Link
+                  href="/regsiter"
                   onClick={closeMobileMenu}
                   className="flex items-center justify-center gap-2 rounded-lg bg-navy px-6 py-4 text-base font-semibold text-white shadow-lg transition-all hover:bg-navy/90 hover:shadow-xl"
                 >
@@ -211,7 +211,7 @@ export default function Navbar({ color = 'white' }: { color?: 'white' | 'black' 
                       d="M9 5l7 7-7 7"
                     />
                   </svg>
-                </a>
+                </Link>
               </div>
             </nav>
           </div>

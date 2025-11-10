@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function StemPrepHero() {
   return (
@@ -48,8 +49,8 @@ export default function StemPrepHero() {
           </p>
 
           {/* Apply Now Button */}
-          <a
-            href="#apply"
+          <Link
+            href="/register "
             className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-3 text-base font-semibold text-white transition-opacity hover:opacity-90 sm:px-10 sm:py-4 sm:text-lg"
           >
             Apply Now
@@ -58,7 +59,7 @@ export default function StemPrepHero() {
 <path d="M11.0471 4.60294L17.4908 11.0466L11.0471 17.4903" stroke="white" strokeWidth="2.76177" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
 
-          </a>
+          </Link>
         </div>
       </div>
     </section>

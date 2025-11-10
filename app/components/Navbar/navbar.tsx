@@ -55,7 +55,7 @@ export default function Navbar({ color = 'white' }: { color?: 'white' | 'black' 
               <div className="hidden items-center gap-6 md:flex">
                 <a
                   href="#courses"
-                  className={`text-sm font-medium ${color === 'white' ? 'text-white' : 'text-navy'}  transition-colors `}
+                  className={`text-sm font-medium ${color === 'white' ? 'text-white hover:text-primary' : 'text-navy hover:text-primary'} transition-colors `}
                 >
                   Courses
                 </a>

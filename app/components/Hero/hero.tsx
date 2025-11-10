@@ -62,12 +62,12 @@ export default function Hero() {
           >
             Explore Programs
           </Link>
-          <a
-            href="#inquire"
+          <Link
+            href="/register"
             className=" border-white border-b px-0 py-1 text-base font-medium text-white transition-all  sm:text-lg"
           >
             Inquire now
-          </a>
+          </Link>
         </div>
       </div>
     </section>

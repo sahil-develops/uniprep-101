@@ -46,7 +46,7 @@ export default function AboutTeam() {
 
       <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center px-4 py-14 text-white sm:px-6 lg:px-8 lg:py-24">
         <div className="flex flex-col items-center text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="text-balance text-2xl font-bold text-[#0A1431] sm:text-4xl lg:text-5xl">
             Meet Our Team
           </h2>
           <p className="mt-3 max-w-2xl text-base text-white/80 sm:text-lg">

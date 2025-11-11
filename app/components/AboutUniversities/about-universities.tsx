@@ -32,7 +32,7 @@ export default function AboutUniversities() {
     <section className="bg-white py-16 sm:py-20">
       <div className="mx-auto flex max-w-6xl flex-col gap-12 px-4 sm:gap-14 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-6 text-center lg:max-w-3xl lg:text-left">
-          <h2 className="text-2xl font-semibold leading-tight text-[#0A1431] sm:text-2xl text-left whitespace-nowrap">
+          <h2 className="text-left text-2xl font-bold text-[#0A1431] sm:text-4xl lg:text-5xl">
             Our Certifying Universities
           </h2>
           <p className="text-base leading-7 text-[#35436B] sm:text-lg text-left">
@@ -55,7 +55,7 @@ export default function AboutUniversities() {
                   alt={university.image.alt}
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover transition-transform rounded-2xl"
+                  className="object-cover  rounded-2xl"
                   priority
                 />
               </div>

@@ -23,7 +23,7 @@ const CTA = () => {
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         {/* Heading */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl font-bold text-white mb-6 sm:mb-6">
+        <h2 className="text-balance text-2xl font-bold text-white sm:text-4xl lg:text-5xl mb-6 sm:mb-6">
           Ready to transform your future?
         </h2>
 

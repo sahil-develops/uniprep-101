@@ -152,7 +152,7 @@ export default function FaqHero() {
       <div className="relative mx-auto flex w-full max-w-5xl flex-col gap-5 px-4 text-white sm:px-6 lg:px-8">
         <header className="text-center">
         
-          <h1 className="mt-4 text-3xl font-bold leading-tight md:text-4xl lg:text-5xl">
+          <h1 className="text-balance text-2xl font-bold text-white mb-6 sm:text-4xl lg:text-5xl">
   FAQ
           </h1>
       

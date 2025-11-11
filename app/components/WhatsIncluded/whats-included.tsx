@@ -83,7 +83,7 @@ const WhatsIncluded = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-10 sm:mb-12 lg:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-900 mb-4 sm:mb-6">
+          <h2 className="text-balance text-2xl font-bold text-black sm:text-4xl lg:text-5xl sm:mb-6 mb-4">
             What's Included
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-neutral-700 max-w-3xl mx-auto leading-relaxed">

@@ -73,7 +73,7 @@ export default function OurProgramsHero({ showCampusCollage = false }: OurProgra
       {/* Content */}
       <div className="relative z-10 max-w-7xl py-5 mx-auto text-center">
         {/* Title */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
+        <h1 className="text-balance text-2xl font-bold text-white mb-6 sm:text-4xl lg:text-5xl">
           Our Programs
         </h1>
 

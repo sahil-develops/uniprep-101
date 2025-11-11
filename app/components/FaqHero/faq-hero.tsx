@@ -149,7 +149,7 @@ export default function FaqHero() {
       <div className="absolute inset-0 -z-10 bg-[#03163E]/70" />
       {/* <div className="absolute inset-0 -z-10 bg-linear-to-b from-[#101E46]/40 via-transparent to-[#03091B]/20" /> */}
 
-      <div className="relative mx-auto flex w-full max-w-5xl flex-col gap-5 px-4 text-white sm:px-6 lg:px-8">
+      <div className="relative mx-auto flex w-full max-w-5xl flex-col gap-5 px-4 lg:pt-0 pt-5 text-white sm:px-6 lg:px-8">
         <header className="text-center">
         
           <h1 className="text-balance text-2xl font-bold text-white mb-6 sm:text-4xl lg:text-5xl">

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const Programs = () => {
   return (
@@ -33,9 +34,9 @@ const Programs = () => {
             imageSrc="/Stemp-prep.webp"
             university="Singapore University Of Technology And Design"
             universityIcon="/SUTD.png"
+            redirectUrl="/stem-prep"
             classSize="35"
             eligibility="Grades 10-12"
-            redirectUrl="/stem-prep"
             includes="Housing and Meals"
             hasBorder={false}
           />
@@ -47,9 +48,10 @@ const Programs = () => {
             imageSrc="/Business-prep.webp"
             university="Singapore Management University"
             universityIcon="/singapore-university.png"
+            redirectUrl="/business-prep"
             classSize="30"
             eligibility="Grades 10-12"
-            redirectUrl="/business-prep"
+
             includes="Housing and Meals"
             hasBorder={true}
           />
@@ -84,11 +86,13 @@ const ProgramCard = ({
   includes,
   hasBorder,
 }: ProgramCardProps) => {
+  const router = useRouter();
   return (
     <div
       className={`bg-white rounded-2xl shadow-lg overflow-hidden ${
         hasBorder ? '' : ''
       }`}
+      onClick={() => router.push(redirectUrl)}
     >
       {/* Image Section */}
       <div className="relative h-64 sm:h-80 overflow-hidden">

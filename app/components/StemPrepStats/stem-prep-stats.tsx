@@ -48,7 +48,7 @@ const Statistic = ({
   return (
     <div className="text-center px-2 sm:px-0">
       <div 
-        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-2 sm:mb-3 md:mb-4 tracking-wide"
+        className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-2 sm:mb-3 md:mb-4 tracking-wide"
         style={{ color: numberColor }}
       >
         {number}

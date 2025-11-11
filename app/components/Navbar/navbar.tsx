@@ -53,12 +53,12 @@ export default function Navbar({ color = 'white' }: { color?: 'white' | 'black' 
             <div className="hidden  lg:flex items-center gap-8">
               {/* Left Navigation Links */}
               <div className="hidden items-center gap-6 md:flex">
-                <a
-                  href="#courses"
+                <Link
+                  href="/our-programs"
                   className={`text-sm font-medium ${color === 'white' ? 'text-white hover:text-primary' : 'text-navy hover:text-primary'} transition-colors `}
                 >
                   Courses
-                </a>
+                </Link>
                 <Link
                   href="/about-us"
                   className={`text-sm font-medium ${color === 'white' ? 'text-white hover:text-primary' : 'text-navy hover:text-primary'} transition-colors `}
@@ -192,7 +192,7 @@ export default function Navbar({ color = 'white' }: { color?: 'white' | 'black' 
               {/* Apply Now Button */}
               <div className="mt-auto pb-8">
                 <Link
-                  href="/regsiter"
+                  href="/register"
                   onClick={closeMobileMenu}
                   className="flex items-center justify-center gap-2 rounded-lg bg-navy px-6 py-4 text-base font-semibold text-white shadow-lg transition-all hover:bg-navy/90 hover:shadow-xl"
                 >

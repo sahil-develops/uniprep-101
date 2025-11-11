@@ -28,7 +28,8 @@ export default function OurProgramsHero({ showCampusCollage = false }: OurProgra
         "Tech Start-Up Visits",
         "Industry Mentorship Sessions"
       ],
-      price: "$3,200"
+      price: "$3,200",
+      redirectUrl: "/stem-prep"
     },
     {
       title: "Business Prep",
@@ -50,7 +51,8 @@ export default function OurProgramsHero({ showCampusCollage = false }: OurProgra
         "Tech Start-Up Visits",
         "Industry Mentorship Sessions"
       ],
-      price: "$3,200"
+      price: "$3,200",
+      redirectUrl: "/business-prep"
     }
   ];
   return (

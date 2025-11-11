@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function StemPrepHero() {
+export default function StemPrepHero({ title = 'STEM Prep' }: { title?: string }) {
   return (
     <section className="relative min-h-screen w-full">
       {/* Background Image with Dark Overlay */}
@@ -35,7 +35,7 @@ export default function StemPrepHero() {
 
           {/* Main Heading */}
           <h1 className="mb-4 text-4xl font-bold text-white sm:text-5xl md:text-6xl lg:text-7xl">
-            STEM Prep
+            {title}
           </h1>
 
           {/* Subtitle */}

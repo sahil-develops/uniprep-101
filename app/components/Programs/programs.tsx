@@ -35,6 +35,7 @@ const Programs = () => {
             universityIcon="/SUTD.png"
             classSize="35"
             eligibility="Grades 10-12"
+            redirectUrl="/stem-prep"
             includes="Housing and Meals"
             hasBorder={false}
           />
@@ -48,6 +49,7 @@ const Programs = () => {
             universityIcon="/singapore-university.png"
             classSize="30"
             eligibility="Grades 10-12"
+            redirectUrl="/business-prep"
             includes="Housing and Meals"
             hasBorder={true}
           />
@@ -58,6 +60,7 @@ const Programs = () => {
 };
 
 interface ProgramCardProps {
+  redirectUrl: string;
   title: string;
   description: string;
   imageSrc: string;
@@ -70,6 +73,7 @@ interface ProgramCardProps {
 }
 
 const ProgramCard = ({
+  redirectUrl,
   title,
   description,
   imageSrc,

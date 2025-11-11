@@ -57,7 +57,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="#programs"
+                  href="/business-prep"
                   className="text-sm sm:text-base text-white hover:text-primary transition-colors"
                 >
                   Business Prep

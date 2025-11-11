@@ -17,14 +17,16 @@ export interface ProgramCardData {
   includes: string;
   highlights: string[];
   price: string;
+  redirectUrl: string;
 }
 
 interface ProgramCardProps {
   data: ProgramCardData;
   program?: boolean;
+
 }
 
-const ProgramCard = ({ data,program  }: ProgramCardProps) => {
+const ProgramCard = ({ data,program }: ProgramCardProps) => {
   return (
     <div className=" rounded-[20px] shadow-lg overflow-hidden w-full">
       {/* Image Section */}
@@ -179,7 +181,7 @@ const ProgramCard = ({ data,program  }: ProgramCardProps) => {
           </Link>
 
           <Link
-            href="/stem-prep"
+            href={data.redirectUrl}
             className="block text-center sm:text-left text-black font-semibold underline underline-offset-4 "
             >
             View Detailed Itinerary

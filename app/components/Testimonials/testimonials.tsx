@@ -20,7 +20,7 @@ const testimonials = [
     university: "Arizona State University",
     bootcamp: "StemPrep101 STEM Boot Camp",
     bootcampColor: "orange",
-    logoSrc: "",
+    logoSrc: "/asu.png",
     logoAlt: "Arizona State University logo",
   },
   {
@@ -29,7 +29,7 @@ const testimonials = [
     university: "Purdue University",
     bootcamp: "StemPrep101 STEM Boot Camp",
     bootcampColor: "blue",
-    logoSrc: "",
+    logoSrc: "/purdue.png",
     logoAlt: "Purdue University logo",
   },
   {
@@ -38,7 +38,7 @@ const testimonials = [
     university: "McMaster University, Canada",
     bootcamp: "StemPrep101 STEM Boot Camp",
     bootcampColor: "orange",
-    logoSrc: "",
+    logoSrc: "/images.png",
     logoAlt: "McMaster University logo",
   },
 ];

@@ -110,7 +110,7 @@ const Footer = () => {
                   href="tel:+6565166666"
                   className="hover:text-primary transition-colors"
                 >
-                  +65 6516 6666 (Singapore)
+                  +65 9799 3310(Singapore)
                 </a>
               </p>
             </div>

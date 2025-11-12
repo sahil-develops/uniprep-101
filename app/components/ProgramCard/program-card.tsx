@@ -184,7 +184,7 @@ const ProgramCard = ({ data,program }: ProgramCardProps) => {
             href={data.redirectUrl}
             className="block text-center sm:text-left text-black font-semibold underline underline-offset-4 "
             >
-            View Detailed Itinerary
+            View Detailed Programs
           </Link>
             
         </div>

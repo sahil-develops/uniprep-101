@@ -26,7 +26,7 @@ export default function Hero() {
           {/* Mobile Layout: 4 lines */}
           <span className="block sm:hidden">
             Certified by{' '}<br/>
-            Singapore.{' '}<br/>
+            Singapore{' '}<br/>
             <span className="relative inline-block font-bold">
               <span className="relative z-10">Recognized</span>
               <span className="absolute bottom-2 left-0 right-0 h-2 z-0 bg-primary"></span>
@@ -39,7 +39,7 @@ export default function Hero() {
           </span>
           {/* Desktop Layout: 2 lines */}
           <span className="hidden sm:block">
-            Certified by Singapore.{' '}<br/>
+            Certified by Singapore{' '}<br/>
             <span className="relative inline-block font-bold">
               <span className="relative z-10">Recognized Worldwide.</span>
               <span className="absolute bottom-2 left-0 right-0 h-5 z-0 bg-primary sm:bottom-1.5"></span>

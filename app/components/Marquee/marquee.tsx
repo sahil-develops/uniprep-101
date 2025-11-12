@@ -76,12 +76,12 @@ const Marquee = () => {
                 color="orange" 
               />
               <Statistic 
-                number="7-9" 
+                number="9" 
                 description="Intensive Days" 
                 color="blue" 
               />
               <Statistic 
-                number="24/7" 
+                number="100%" 
                 description="Student Support" 
                 color="orange" 
               />

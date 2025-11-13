@@ -63,7 +63,7 @@ const Testimonials = ({ withBackground = false }: TestimonialsProps) => {
         </div>
       )}
 
-      <section className="relative bg-transparent py-10 sm:py-12 lg:py-12 px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-white py-10 sm:py-12 lg:py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-2xl lg:text-[32px] sm:text-4xl md:text-5xl font-bold text-neutral-900 mb-8 sm:mb-12">
             {!withBackground && (

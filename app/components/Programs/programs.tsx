@@ -21,7 +21,7 @@ const Programs = () => {
       
       <div className="relative max-w-7xl mx-auto">
         {/* Section Title */}
-        <h2 className="text-balance text-2xl font-bold text-black mb-6 sm:text-4xl lg:text-5xl">
+        <h2 className="text-balance text-2xl font-bold text-black mb-6 sm:text-4xl lg:text-[32px]">
           Our Programs
         </h2>
 

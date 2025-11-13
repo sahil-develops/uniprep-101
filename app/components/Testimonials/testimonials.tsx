@@ -9,7 +9,7 @@ const testimonials = [
     text: "Going into the courses, I was unsure of what to expect from the classes. I must say it was a really enriching experience as to what freshman-level academics could look like. I have gained a better understanding of the subjects after the rigorous classes and assignments given. As a student, I feel a lot more confident now going off to college.",
     name: "Adhi Daiv",
     university: "Stanford University",
-    bootcamp: "StemPrep101 STEM Boot Camp",
+    bootcamp: "STEM Bootcamp",
     bootcampColor: "blue",
     logoSrc: "/Stanford-small.png",
     logoAlt: "Stanford University logo",
@@ -18,7 +18,7 @@ const testimonials = [
     text: "Hello, I am Aneri Shah and I will be attending Arizona State University. The boot camp of StemPrep101 was very nice as it made the subjects lucid and helped me recap and understand further topics which I will be studying in my freshman year. I appreciate the efforts put in by the team.",
     name: "Aneri S.",
     university: "Arizona State University",
-    bootcamp: "StemPrep101 STEM Boot Camp",
+    bootcamp: "BUSINESS Bootcamp",
     bootcampColor: "orange",
     logoSrc: "/asu.png",
     logoAlt: "Arizona State University logo",
@@ -27,7 +27,7 @@ const testimonials = [
     text: "Despite the inherent challenges of online classes, I found them engaging and beginner-friendly, even though I lacked prior knowledge in physics. Professors Adam and Bassem were patient and always available to clarify any confusion. The systematic uploads of lecture videos, notes, and assignments were helpful for my review. If you pay attention, keep asking questions, review material, and do the assignments, you will be on an awesome track with holistic support from the professors.",
     name: "Sophia C.",
     university: "Purdue University",
-    bootcamp: "StemPrep101 STEM Boot Camp",
+    bootcamp: "BUSINESS Bootcamp",
     bootcampColor: "blue",
     logoSrc: "/purdue.png",
     logoAlt: "Purdue University logo",
@@ -36,7 +36,7 @@ const testimonials = [
     text: "StemPrep101 has greatly helped with my confidence going to university. Through my experience with this camp, I have learned many new skills and concepts with the assistance of awesome teachers and resources. A big thank you to the hardworking coordinators and instructors of StemPrep101 for making such a wonderful program for aspiring STEM students possible.",
     name: "Bokai H.",
     university: "McMaster University, Canada",
-    bootcamp: "StemPrep101 STEM Boot Camp",
+    bootcamp: "STEM Bootcamp",
     bootcampColor: "orange",
     logoSrc: "/images.png",
     logoAlt: "McMaster University logo",
@@ -63,9 +63,9 @@ const Testimonials = ({ withBackground = false }: TestimonialsProps) => {
         </div>
       )}
 
-      <section className="relative bg-transparent py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-transparent py-10 sm:py-12 lg:py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-neutral-900 mb-8 sm:mb-12">
+          <h1 className="text-2xl lg:text-[32px] sm:text-4xl md:text-5xl font-bold text-neutral-900 mb-8 sm:mb-12">
             {!withBackground && (
               <>Student{" "}</>
               )}
@@ -123,7 +123,7 @@ const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
       </p>
 
       {/* Student Info and Bootcamp Tag */}
-      <div className="flex flex-row items-center justify-between gap-4">
+      <div className="flex flex-row items-end justify-between gap-4">
         {/* Left: Student Info */}
         <div className="flex items-start gap-3">
           <div>
@@ -153,7 +153,7 @@ const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
         {testimonial.bootcamp && (
           <div className="shrink-0">
             <span
-              className="inline-block px-3 py-2 rounded-full text-white text-[9px] sm:text-baseline font-semibold whitespace-nowrap"
+              className="inline-block px-3 py-2 rounded-full text-white text-[9px] lg:text-sm sm:text-baseline font-semibold whitespace-nowrap"
               style={{ backgroundColor: bootcampBgColor }}
             >
               {testimonial.bootcamp}

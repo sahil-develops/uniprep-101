@@ -102,8 +102,7 @@ export default function Navbar({ color = 'white' }: { color?: 'white' | 'black' 
         onClick={closeMobileMenu}
       >
         {/* Background Overlay */}
-        <div className="absolute inset-0 bg-black/30" onClick={closeMobileMenu}></div>
-        
+ 
         {/* Slide-in Menu */}
         <div
           className="absolute right-0 top-0 h-full w-[70%] bg-primary shadow-2xl"

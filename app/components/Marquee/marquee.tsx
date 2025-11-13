@@ -35,7 +35,7 @@ const Marquee = () => {
       
       {/* Header with yellow highlight */}
       <div className="py-8 sm:py-12 px-4">
-      <h2 className="text-left text-xl  max-w-7xl mx-auto sm:text-3xl md:text-4xl font-medium text-neutral-900 mb-0 sm:mb-0">
+      <h2 className="text-left text-xl  max-w-7xl mx-auto sm:text-3xl md:text-4xl lg:text-[32px] font-medium text-neutral-900 mb-0 sm:mb-0">
           <span className="relative inline-block font-bold">
             <span className="relative z-10"> Our Alumni Are Now Studying At.</span>
             <span className="absolute bottom-0.5 left-0 right-0 lg:h-5 h-2 z-0 bg-[#FDEC04] sm:-bottom-0.5 "></span>

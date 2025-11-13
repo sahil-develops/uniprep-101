@@ -43,8 +43,8 @@ const CTA = () => {
 
           {/* Apply Now Button - Solid Orange */}
           <Link href="/register" className="w-full sm:w-auto">
-          <button className="px-8 cursor-pointer sm:px-10 py-3 sm:py-4 rounded-lg text-white text-base sm:text-lg font-medium bg-primary hover:opacity-90 transition-opacity duration-200 w-full sm:w-auto">
-            Apply now
+          <button className="px-8 cursor-pointer sm:px-10 py-3 sm:py-4 rounded-[4px] text-white text-base sm:text-lg font-medium bg-primary hover:opacity-90 transition-opacity duration-200 w-full sm:w-auto">
+            Register
           </button>
           </Link>
         </div>

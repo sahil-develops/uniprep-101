@@ -125,8 +125,7 @@ export default function RegisterPage() {
                 </option>
                 <option value="stemprep">STEMPrep</option>
                 <option value="bizprep">BizPrep</option>
-                <option value="summer-immersion">Summer Immersion</option>
-                <option value="mentorship">Mentorship</option>
+             
               </select>
             </div>
 

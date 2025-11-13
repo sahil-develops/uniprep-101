@@ -7,7 +7,7 @@ interface CampusCollageProps {
   alt2?: string;
 }
 
-const CampusCollage = ({ image1, image2, alt1 = "University Campus", alt2 = "University Campus" }: CampusCollageProps) => {
+const CampusCollage = ({ image1, alt1 = "University Campus" }: CampusCollageProps) => {
   return (
     <div className="w-full ">
       <div className="max-w-7xl mx-auto">

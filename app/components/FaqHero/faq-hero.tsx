@@ -27,7 +27,7 @@ const faqs: FaqItem[] = [
           SUTD for the StemPrep101 and SMU for the BizPrep101.
         </p>
         <p className="mt-4">
-          This is a great value booster to the student’s personal profile that lets them stand apart from their peers when
+          This is a great value booster to the student&apos;s personal profile that lets them stand apart from their peers when
           applying to universities.
         </p>
       </>
@@ -82,7 +82,7 @@ const faqs: FaqItem[] = [
     question: 'Is there an entrance test to assess eligibility?',
     answer: (
       <p>
-        Yes, there is an entrance test to assess eligibility. The entrance test is a multiple choice test that is designed to assess the student's knowledge of the program.
+        Yes, there is an entrance test to assess eligibility. The entrance test is a multiple choice test that is designed to assess the student&apos;s knowledge of the program.
       </p>
     ),
   },
@@ -147,7 +147,6 @@ export default function FaqHero() {
       />
 
       <div className="absolute inset-0 -z-10 bg-[#03163E]/70" />
-      {/* <div className="absolute inset-0 -z-10 bg-linear-to-b from-[#101E46]/40 via-transparent to-[#03091B]/20" /> */}
 
       <div className="relative mx-auto flex w-full max-w-5xl flex-col gap-5 px-4 lg:pt-0 pt-5 text-white sm:px-6 lg:px-8">
         <header className="text-center">
@@ -160,7 +159,7 @@ export default function FaqHero() {
 
         {/* Desktop / Tablet Cards */}
         <div className="hidden grid-cols-1 gap-6 md:grid">
-          {faqs.map((item, index) => (
+          {faqs.map((item) => (
             <article
               key={item.question}
               className="flex flex-col gap-4 rounded-3xl border border-white/10 bg-white/95 p-8 text-left text-slate-900 shadow-xl shadow-black/10"
@@ -223,5 +222,3 @@ export default function FaqHero() {
     </section>
   );
 }
-
-

@@ -4,9 +4,7 @@ import CTA from '@/app/components/CTA/cta';
 import AboutHero from '@/app/components/AboutHero/about-hero';
 import AboutBootcamps from '@/app/components/AboutBootcamps/about-bootcamps';
 import AboutUniversities from '@/app/components/AboutUniversities/about-universities';
-import AboutMission from '@/app/components/AboutMission/about-mission';
 import AboutStats from '@/app/components/AboutStats/about-stats';
-import AboutStory from '@/app/components/AboutStory/about-story';
 import AboutTeam from '@/app/components/AboutTeam/about-team';
 import AboutSingapore from '@/app/components/AboutSingapore/about-singapore';
 

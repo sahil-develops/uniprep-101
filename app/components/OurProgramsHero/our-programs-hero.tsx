@@ -1,12 +1,11 @@
 import Image from 'next/image';
 import ProgramCard, { ProgramCardData } from '@/app/components/ProgramCard/program-card';
-import CampusCollage from '@/app/components/CampusCollage/campus-collage';
 
 interface OurProgramsHeroProps {
   showCampusCollage?: boolean;
 }
 
-export default function OurProgramsHero({ showCampusCollage = false }: OurProgramsHeroProps) {
+export default function OurProgramsHero() {
   const programsData: ProgramCardData[] = [
     {
       title: "STEM Prep",
@@ -83,7 +82,7 @@ export default function OurProgramsHero({ showCampusCollage = false }: OurProgra
             Come to sunny, safe, and modern Singapore for our residential summer programs - a truly transformative experience.
           </p>
           <p className="text-base sm:text-lg md:text-lg text-white leading-relaxed">
-            With certifications from two of Singapore's leading universities, our programs combine academic excellence, immersive workshops and real-world exposure all in the country's world-class, dynamic environment.
+            With certifications from two of Singapore&apos;s leading universities, our programs combine academic excellence, immersive workshops and real-world exposure all in the country&apos;s world-class, dynamic environment.
           </p>
         </div>
       </div>
@@ -111,4 +110,3 @@ export default function OurProgramsHero({ showCampusCollage = false }: OurProgra
     </section>
   );
 }
-

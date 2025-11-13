@@ -45,12 +45,12 @@ export default function StemPrepHero({ title = 'STEM Prep' }: { title?: string }
 
           {/* Description */}
           <p className="mb-10 max-w-2xl text-base leading-relaxed text-white sm:text-lg md:text-xl">
-            Experience cutting-edge technology and engineering through hands-on learning, industry visits, and real-world projects in Singapore's innovation ecosystem.
+            Experience cutting-edge technology and engineering through hands-on learning, industry visits, and real-world projects in Singapore&apos;s innovation ecosystem.
           </p>
 
           {/* Apply Now Button */}
           <Link
-            href="/register "
+            href="/register"
             className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-3 text-base font-semibold text-white transition-opacity hover:opacity-90 sm:px-10 sm:py-4 sm:text-lg"
           >
             Apply Now
@@ -65,4 +65,3 @@ export default function StemPrepHero({ title = 'STEM Prep' }: { title?: string }
     </section>
   );
 }
-

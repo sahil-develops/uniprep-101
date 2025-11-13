@@ -8,7 +8,7 @@ export default function OurProgramsPage() {
   return (
     <main className="min-h-screen">
       <Navbar />
-      <OurProgramsHero showCampusCollage={true} />
+      <OurProgramsHero />
       <WhatsIncluded />
     <CTA/>
       <Footer />

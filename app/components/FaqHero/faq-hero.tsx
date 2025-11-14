@@ -13,8 +13,7 @@ const faqs: FaqItem[] = [
     question: 'How long is the program?',
     answer: (
       <p>
-        Both the StemPrep101 and the BizPrep101 programs are 9 days long, inclusive of one weekend in between.
-        They start on a Monday and conclude on the Tuesday of the following week.
+        Both the StemPrep101 and the BizPrep101 programs are 9 days long, inclusive of one weekend in between. They start on a Monday and conclude on the Tuesday of the following week
       </p>
     ),
   },
@@ -23,12 +22,7 @@ const faqs: FaqItem[] = [
     answer: (
       <>
         <p>
-          The certifications for the workshops are issued directly by the respective universities themselves.
-          SUTD for the StemPrep101 and SMU for the BizPrep101.
-        </p>
-        <p className="mt-4">
-          This is a great value booster to the student&apos;s personal profile that lets them stand apart from their peers when
-          applying to universities.
+        The certifications for the workshops are issued directly by the respective universities themselves -  SUTD for the StemPrep101 workshop and by SMU for the BizPrep101 workshop. This is a great value booster to the student’s personal profile that lets them stand apart from their peers when applying to universities
         </p>
       </>
     ),
@@ -57,8 +51,7 @@ const faqs: FaqItem[] = [
     question: 'What equipment are students expected to bring?',
     answer: (
       <p>
-        Students must bring their own laptops, personal essentials, and any additional items specified in the pre-departure checklist
-        that will be shared closer to the program start date.
+        Yes, students need to bring their own laptop and chargers for use in the workshops
       </p>
     ),
   },
@@ -66,7 +59,10 @@ const faqs: FaqItem[] = [
     question: 'What is the booking process?',
     answer: (
       <p>
-        Booking is done through our website. Once you have selected the program you wish to join, you will be redirected to a booking page where you can complete the payment and confirm your booking.
+    Participants will have to complete the application form (show link to app form in the website) and submit to us. This serves as a confirmation of their participation subject to our checks regarding eligibility based on their age as well as proficiency (see FAQs below on eligibility and proficiency). 
+
+Once this is done, we will send you an email with a payment link for payment by credit / debit card.
+
       </p>
     ),
   },
@@ -74,7 +70,9 @@ const faqs: FaqItem[] = [
     question: 'Is there a booking deadline?',
     answer: (
       <p>
-        Yes, there is a booking deadline. The deadline for booking is 1 week before the program start date.
+      Yes. February 15, 2026 is the booking deadline for the program starting on June 15, 2026 and March 15, 2026 is the deadline for the program starting on July 6, 2026. 
+
+Registrations and payments have to be submitted by then. Note that cohort sizes are limited to a maximum of 35 students per program and subject to eligibility, places will be allotted on a first come, first serve basis
       </p>
     ),
   },
@@ -90,7 +88,7 @@ const faqs: FaqItem[] = [
     question: 'What is the level of proficiency needed?',
     answer: (
       <p>
-        There is no specific level of proficiency needed. However, students should have a basic understanding of the topics covered in the program.
+   A working knowledge of English is a must. Other than that, to maximise the benefit of each program, those applying for the StemPrep101 program should be familiar with Science topics and those registering for the BizPrep101 program should be familiar with basic reasoning and analysis skills
       </p>
     ),
   },
@@ -98,7 +96,11 @@ const faqs: FaqItem[] = [
     question: 'What about accommodation?',
     answer: (
       <p>
-        Accommodation is included in the price of the program. Students will be accommodated in a dormitory on the university campus.
+       The program price includes accommodation on a twin sharing basis at a modern hotel with all amenities.
+
+Is there an option to opt out of the accommodation?
+
+We strongly suggest that the students stay at accommodation provided by us as part of this program. This fosters bonding and networking opportunities with their fellow students. However, participants may have friends or family of their own here in Singapore with whom they may wish to stay or alternatively decide to come with other family members and get accommodation arranged separately. Those opting for that can do so in which case we will be happy to provide a program price without accommodation included.
       </p>
     ),
   },
@@ -106,7 +108,7 @@ const faqs: FaqItem[] = [
     question: 'Are boys and girls housed separately?',
     answer: (
       <p>
-        Yes, boys and girls are housed separately.
+   Yes, boys and girls will be in separate twin sharing rooms in the hotel
       </p>
     ),
   },
@@ -114,7 +116,15 @@ const faqs: FaqItem[] = [
     question: 'Who looks after the students?',
     answer: (
       <p>
-        The program is run by the university itself. The university will provide a coordinator to look after the students.
+      There will be an overall Program Director who will be overseeing both programs and all students will be able to contact him/her through their mobile, WhatsApp and email. Contact details for the Program Director will be shared well in advance of the commencement of each program batch
+      </p>
+    ),
+  },
+  {
+    question: 'Who will be responsible for procuring the visas? ',
+    answer: (
+      <p>
+Participants are responsible for procuring their visas and the costs thereof. We will be happy to provide a letter to registrants confirming that they wish to travel to Singapore for participating in our program
       </p>
     ),
   },
@@ -122,7 +132,7 @@ const faqs: FaqItem[] = [
     question: 'What about travel insurance? ',
     answer: (
       <p>
-        Yes, the students will be able to attend the university classes.
+     All participants will mandatorily have to purchase their own comprehensive travel insurance that covers the duration of the trip including but not limited to accidents, medical issues, repatriation and travel related incidents. We have a preferred provider with whom we have negotiated a discounted cost and will be happy to refer students to them. Proof of travel insurance is required prior to commencement of travel for the programs.
       </p>
     ),
   }

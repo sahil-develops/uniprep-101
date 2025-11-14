@@ -13,7 +13,7 @@ const Footer = () => {
             <Image
               src="/logo.svg"
               alt="UNIPREP101 Logo"
-              width={241}
+              width={300}
               height={57}
               className="h-auto"
             />

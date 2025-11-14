@@ -23,7 +23,7 @@ const CTA = () => {
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         {/* Heading */}
-        <h2 className="text-balance text-2xl font-bold text-white sm:text-4xl lg:text-5xl mb-6 sm:mb-6">
+        <h2 className="text-balance text-2xl font-bold text-white sm:text-4xl lg:text-4xl mb-6 sm:mb-6">
           Ready to transform your future?
         </h2>
 
@@ -33,17 +33,17 @@ const CTA = () => {
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-row items-center justify-center gap-4 sm:gap-6">
+        <div className="flex flex-row items-center justify-center gap-4 sm:gap-3">
           {/* View Courses Button - Outlined */}
           <Link href="/our-programs" className="w-full sm:w-auto">
-          <button className="px-8 cursor-pointer sm:px-10 py-3 sm:py-4 rounded-lg text-white text-base sm:text-lg font-medium border border-white bg-transparent hover:bg-white/10 transition-colors duration-200 w-full sm:w-auto">
+          <button className="px-8 cursor-pointer sm:px-10 py-3 sm:py-2 rounded-[4px] text-white text-base sm:text-lg font-medium border border-white bg-transparent hover:bg-white/10 transition-colors duration-200 w-full sm:w-auto">
             View Courses
           </button>
           </Link>
 
           {/* Apply Now Button - Solid Orange */}
           <Link href="/register" className="w-full sm:w-auto">
-          <button className="px-8 cursor-pointer sm:px-10 py-3 sm:py-4 rounded-[4px] text-white text-base sm:text-lg font-medium bg-primary hover:opacity-90 transition-opacity duration-200 w-full sm:w-auto">
+          <button className="px-8 cursor-pointer sm:px-14 py-3 sm:py-2 rounded-[4px] text-white text-base sm:text-lg font-medium bg-primary hover:opacity-90 transition-opacity duration-200 w-full sm:w-auto">
             Register
           </button>
           </Link>

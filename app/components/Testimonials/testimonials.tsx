@@ -49,7 +49,7 @@ interface TestimonialsProps {
 
 const Testimonials = ({ withBackground = false }: TestimonialsProps) => {
   return (
-    <div className={`relative ${withBackground ? "overflow-hidden pt-10" : "bg-[#F7F3E3] "}`}>
+    <div className={`relative ${withBackground ? "overflow-hidden pt-10" : "bg-[#F7F3E3] "} `}>
       {withBackground && (
         <div className="absolute inset-0 -z-10">
           <Image
@@ -63,7 +63,7 @@ const Testimonials = ({ withBackground = false }: TestimonialsProps) => {
         </div>
       )}
 
-      <section className="relative bg-white py-10 sm:py-12 lg:py-12 px-4 sm:px-6 lg:px-8">
+      <section className={`relative ${withBackground ? "bg-transparent " : "bg-white"}  py-10 sm:py-12 lg:py-12 px-4 sm:px-6 lg:px-12`}>
         <div className="max-w-7xl mx-auto">
           <h1 className="text-2xl lg:text-[32px] sm:text-4xl md:text-5xl font-bold text-neutral-900 mb-8 sm:mb-12">
             {!withBackground && (
@@ -127,7 +127,7 @@ const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
         {/* Left: Student Info */}
         <div className="flex items-start gap-3">
           <div>
-            <h3 className="text-sm sm:text-xl font-bold text-neutral-900 mb-1">
+            <h3 className="text-sm sm:text-base font-bold text-neutral-900 mb-1">
               {testimonial.name}
             </h3>
             <div className="flex items-center gap-2">

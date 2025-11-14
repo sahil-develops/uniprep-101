@@ -5,9 +5,9 @@ import { useRouter } from "next/navigation";
 
 const Programs = () => {
   return (
-    <section className="relative bg-white py-12 sm:py-16 lg:py-10 px-4 sm:px-6 lg:px-8">
+    <section className="relative bg-[#F7F3E3] py-12 sm:py-16 lg:py-10 px-4 sm:px-6 lg:px-8">
       {/* Background with wavy pattern */}
-      <div className="absolute inset-0 z-0">
+      {/* <div className="absolute inset-0 z-0">
         <Image
           src="/bg-program.png"
           alt="Singapore skyline"
@@ -17,7 +17,7 @@ const Programs = () => {
           quality={70}
         />
       
-      </div>
+      </div> */}
       
       <div className="relative max-w-7xl mx-auto">
         {/* Section Title */}
@@ -131,9 +131,14 @@ const ProgramCard = ({
               />
             </div>
             <div className="flex-1">
+              {university === "Singapore Management University" ?
+              <p className="text-xs sm:text-sm font-bold text-neutral-800 text-wrap leading-tight">
+                Singapore <br/> Management University
+              </p> :
               <p className="text-xs sm:text-sm font-bold text-neutral-800 text-wrap leading-tight">
                 {university}
               </p>
+              }
             </div>
           </div>
 

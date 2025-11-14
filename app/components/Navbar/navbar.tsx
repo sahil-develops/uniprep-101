@@ -30,7 +30,7 @@ export default function Navbar({ color = 'white' }: { color?: 'white' | 'black' 
   return (
     <>
       <nav
-        className="absolute inset-x-0 top-0 z-50 bg-transparent transition-colors duration-300  "
+        className="absolute inset-x-0 top-0 z-50 bg-transparent transition-colors duration-300 hover:bg-navy group"
       >
         <div className="lg:mx-auto w-full lg:max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-20 items-start lg:items-center justify-between py-4 lg:py-0">
@@ -40,13 +40,13 @@ export default function Navbar({ color = 'white' }: { color?: 'white' | 'black' 
               <div className="hidden items-center gap-6 md:flex">
                 <Link
                   href="/our-programs"
-                  className={`text-sm font-medium ${color === 'white' ? 'text-white hover:text-primary' : 'text-navy hover:text-primary'} transition-colors `}
+                  className={`text-sm font-medium ${color === 'white' ? 'text-white hover:text-primary group-hover:text-white' : 'text-navy hover:text-primary group-hover:text-white'} transition-colors `}
                 >
                   Courses
                 </Link>
                 <Link
                   href="/about-us"
-                  className={`text-sm font-medium ${color === 'white' ? 'text-white hover:text-primary' : 'text-navy hover:text-primary'} transition-colors `}
+                  className={`text-sm font-medium ${color === 'white' ? 'text-white hover:text-primary group-hover:text-white' : 'text-navy hover:text-primary group-hover:text-white'} transition-colors `}
                 >
                   About Us
                 </Link>
@@ -66,10 +66,17 @@ export default function Navbar({ color = 'white' }: { color?: 'white' | 'black' 
             <div className="flex items-center gap-6">
               <Link
                 href="/faq"
-                className={`hidden text-sm font-medium ${color === 'white' ? 'text-white' : 'text-navy'} transition-colors hover:text-primary md:block`}
+                className={`hidden text-sm font-medium ${color === 'white' ? 'text-white hover:text-primary group-hover:text-white' : 'text-navy hover:text-primary group-hover:text-white'} transition-colors hover:text-primary md:block`}
               >
                 FAQ
               </Link>
+              <Link
+                    href="/testimonials"
+                  onClick={closeMobileMenu}
+                  className={`hidden text-sm font-medium ${color === 'white' ? 'text-white hover:text-primary group-hover:text-white'  : 'text-navy hover:text-primary group-hover:text-white'} transition-colors hover:text-primary md:block tracking-wide`}
+                >
+                  Testimonials
+                </Link>
               <Link
                 href="/register"
                 className="hidden rounded-lg bg-primary px-6 py-2 text-sm font-semibold uppercase text-white transition-colors hover:bg-primary/90 md:block"

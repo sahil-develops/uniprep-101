@@ -5,26 +5,26 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0A2342] text-white py-8 sm:py-10 lg:py-4 px-4 sm:px-6 lg:px-8">
+    <footer className="bg-[#0A2342] text-white py-5 sm:py-10 lg:py-4 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Logo and Tagline */}
-        <div className="text-center mb-10 sm:mb-12 lg:mb-8">
-          <div className="flex justify-center mb-4">
+        <div className="text-center mb-5 sm:mb-12 lg:mb-8">
+          <div className="flex justify-center lg:mb-4 mb-2">
             <Image
               src="/logo.svg"
               alt="UNIPREP101 Logo"
               width={300}
               height={57}
-              className="h-auto"
+              className="h-auto lg:w-72 w-44 "
             />
           </div>
-          <p className="text-sm sm:text-base text-white max-w-2xl mx-auto">
+          <p className="text-lg sm:text-base text-white max-w-2xl mx-auto">
             Preparing students for global opportunities through Singapore education
           </p>
         </div>
 
         {/* Links and Contact Section */}
-        <div className="flex flex-row items-start justify-center gap-8 sm:gap-40 mb-7 sm:mb-8 lg:mb-4">
+        <div className="flex flex-row items-start justify-center gap-12 sm:gap-40 mb-7 sm:mb-8 lg:mb-4">
           {/* Quick Links */}
           <div>
             <h3 className="text-lg sm:text-lg font-bold text-white mb-2 sm:mb-2">
@@ -34,7 +34,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/"
-                  className="text-sm sm:text-sm text-white hover:text-primary transition-colors"
+                  className="text-lg sm:text-sm text-white hover:text-primary transition-colors"
                 >
                   Home
                 </Link>
@@ -42,7 +42,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/our-programs"
-                  className="text-sm sm:text-sm text-white hover:text-primary transition-colors"
+                  className="text-lg sm:text-sm text-white hover:text-primary transition-colors"
                 >
                   Courses
                 </Link>
@@ -50,7 +50,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/stem-prep"
-                  className="text-sm sm:text-sm text-white hover:text-primary transition-colors"
+                  className="text-lg sm:text-sm text-white hover:text-primary transition-colors"
                 >
                   STEM Prep
                 </Link>
@@ -58,7 +58,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/business-prep"
-                  className="text-sm sm:text-sm text-white hover:text-primary transition-colors"
+                  className="text-lg sm:text-sm text-white hover:text-primary transition-colors"
                 >
                   Business Prep
                 </Link>
@@ -66,7 +66,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/about-us"
-                  className="text-sm sm:text-sm text-white hover:text-primary transition-colors"
+                  className="text-lg sm:text-sm text-white hover:text-primary transition-colors"
                 >
                   About Us
                 </Link>
@@ -74,7 +74,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/faq"
-                  className="text-sm sm:text-sm text-white hover:text-primary transition-colors"
+                  className="text-lg sm:text-sm text-white hover:text-primary transition-colors"
                 >
                   FAQ
                 </Link>
@@ -82,7 +82,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/register"
-                  className="text-sm sm:text-sm text-white hover:text-primary transition-colors"
+                  className="text-lg sm:text-sm text-white hover:text-primary transition-colors"
                 >
                   Inquire
                 </Link>
@@ -91,12 +91,12 @@ const Footer = () => {
           </div>
 
           {/* Contact */}
-          <div className="flex flex-col gap-2 justify-between h-full gap-y-20">
+          <div className="flex flex-col gap-2 justify-between h-full gap-y-5 lg:gap-y-20">
             <div className="space-y-0  mb-3 sm:mb-4">
               <h3 className="text-lg sm:text-lg font-bold text-white mb-3 sm:mb-2">
                 Contact
             </h3>
-              <p className="text-sm sm:text-base text-white">
+              <p className="text-lg sm:text-base text-white">
                 <a
                   href="mailto:info@uniprep101.com"
                   className="hover:text-primary transition-colors"
@@ -104,7 +104,7 @@ const Footer = () => {
                   info@uniprep101.com
                 </a>
               </p>
-              <p className="text-sm sm:text-base text-white">
+              <p className="text-lg sm:text-base text-white">
            
                 <a
                   href="tel:+6565166666"
@@ -194,20 +194,20 @@ const Footer = () => {
         </div>
 
         {/* Copyright and Legal Links */}
-        <div className=" pt-8 sm:pt-0 text-center">
-          <p className="text-sm sm:text-base text-white mb-2">
+        <div className=" pt-4 sm:pt-0 text-center">
+          <p className="text-lg sm:text-base text-white mb-2">
             © 2025 Uniprep101. All rights reserved.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
             <Link
               href="/privacy-policy"
-              className="text-sm sm:text-sm text-white hover:text-primary transition-colors"
+              className="text-lg sm:text-sm text-white hover:text-primary transition-colors"
             >
               Privacy Policy
             </Link>
             <Link
               href="/terms-of-service"
-              className="text-sm sm:text-sm text-white hover:text-primary transition-colors"
+              className="text-lg sm:text-sm text-white hover:text-primary transition-colors"
             >
               Terms of Service
             </Link>

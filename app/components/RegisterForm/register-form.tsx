@@ -187,32 +187,7 @@ export default function RegisterForm() {
           Register Your Interest
         </h1>
 
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-center">
-          <div className="flex gap-3 rounded-full p-2">
-            <button
-              type="button"
-              onClick={() => handleProgramSelect('stemprep')}
-              className={`w-full rounded-lg px-6 py-3 text-sm font-semibold text-white transition-transform duration-200 ${
-                formData.selectedProgram === 'stemprep'
-                  ? 'bg-[#FF6600] shadow-lg'
-                  : 'bg-[#FF6600] opacity-60 hover:opacity-80'
-              }`}
-            >
-              STEMPrep
-            </button>
-            <button
-              type="button"
-              onClick={() => handleProgramSelect('bizprep')}
-              className={`w-full rounded-lg px-6 py-3 text-sm font-semibold text-white transition-transform duration-200 ${
-                formData.selectedProgram === 'bizprep'
-                  ? 'bg-[#0C44FF] shadow-lg'
-                  : 'bg-[#0C44FF] opacity-60 hover:opacity-80'
-              }`}
-            >
-              BizPrep
-            </button>
-          </div>
-        </div>
+        
 
         <p className="text-center text-sm font-medium text-[#4B5875] sm:text-base">
           Only applicable to grades 10-12. All candidates will be interviewed prior to final
@@ -290,6 +265,9 @@ export default function RegisterForm() {
             onChange={handleInputChange}
             placeholder="+91 98765 43210"
             required
+            pattern="^\+?[1-9]\d{1,14}$"
+            title="Please enter a valid phone number"
+    
             className="w-full rounded-[4px] bg-[#0000000D] px-4 py-3 text-black placeholder:text-[#94A0B8]"
           />
         </div>

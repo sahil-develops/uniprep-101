@@ -1,9 +1,6 @@
 import Image from 'next/image';
 import ProgramCard, { ProgramCardData } from '@/app/components/ProgramCard/program-card';
 
-interface OurProgramsHeroProps {
-  showCampusCollage?: boolean;
-}
 
 export default function OurProgramsHero() {
   const programsData: ProgramCardData[] = [

@@ -1,6 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { supabase } from '@/lib/supabase';
 
+// Define explicit error type for catch
+type ErrorWithMessage = {
+  message: string;
+  code?: string;
+};
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
@@ -31,9 +37,9 @@ export async function POST(request: NextRequest) {
 
     if (error) {
       console.error('Supabase error:', error);
-      
+
       // Handle duplicate email error (PostgreSQL unique constraint violation)
-      if (error.code === '23505' || error.message.includes('duplicate key')) {
+      if (error.code === '23505' || (typeof error.message === 'string' && error.message.includes('duplicate key'))) {
         return NextResponse.json(
           { error: 'This email is already registered' },
           { status: 409 }
@@ -47,24 +53,26 @@ export async function POST(request: NextRequest) {
     }
 
     return NextResponse.json(
-      { 
-        success: true, 
+      {
+        success: true,
         message: 'Registration saved successfully',
-        id: data?.id 
+        id: data?.id
       },
       { status: 201 }
     );
-  } catch (error: any) {
+  } catch (error: unknown) {
+
     console.error('Unexpected error:', error);
+    const err = error as ErrorWithMessage;
     return NextResponse.json(
-      { error: 'Failed to save registration', details: error.message },
+      { error: 'Failed to save registration', details: err?.message || 'Unknown error' },
       { status: 500 }
     );
   }
 }
 
 // Optional: GET endpoint to retrieve registrations (for admin use)
-export async function GET(request: NextRequest) {
+export async function GET(_request: NextRequest) {
   try {
     const { data, error } = await supabase
       .from('registrations')
@@ -81,12 +89,13 @@ export async function GET(request: NextRequest) {
     }
 
     return NextResponse.json({ registrations: data }, { status: 200 });
-  } catch (error: any) {
+  } catch (error: unknown) {
+
     console.error('Unexpected error:', error);
+    const err = error as ErrorWithMessage;
     return NextResponse.json(
-      { error: 'Failed to fetch registrations', details: error.message },
+      { error: 'Failed to fetch registrations', details: err?.message || 'Unknown error' },
       { status: 500 }
     );
   }
 }
-

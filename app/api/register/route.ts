@@ -72,6 +72,7 @@ export async function POST(request: NextRequest) {
 }
 
 // Optional: GET endpoint to retrieve registrations (for admin use)
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export async function GET(_request: NextRequest) {
   try {
     const { data, error } = await supabase

@@ -142,39 +142,39 @@ export default function Navbar({ color = 'white' }: { color?: 'white' | 'black' 
 
             {/* Menu Items */}
             <nav className="flex flex-1 flex-col px-8 py-8">
-              <div className="flex flex-col gap-8">
+              <div className="flex flex-col gap-6">
                 <Link
                   href="/"
                   onClick={closeMobileMenu}
-                  className="text-xl font-medium text-navy transition-colors hover:text-navy/80"
+                  className="text-xl font-bold text-navy transition-colors hover:text-navy/80"
                 >
                   Home
                 </Link>
                 <Link
                   href="/our-programs"
                   onClick={closeMobileMenu}
-                  className="text-xl font-medium text-navy transition-colors hover:text-navy/80"
+                  className="text-xl font-bold text-navy transition-colors hover:text-navy/80"
                 >
                   Courses
                 </Link>
                 <Link
                   href="/about-us"
                   onClick={closeMobileMenu}
-                  className="text-xl font-medium text-navy transition-colors hover:text-navy/80"
+                  className="text-xl font-bold text-navy transition-colors hover:text-navy/80"
                 >
                   About Us
                 </Link>
                 <Link
                   href="/faq"
                   onClick={closeMobileMenu}
-                  className="text-xl font-medium text-navy transition-colors hover:text-navy/80"
+                  className="text-xl font-bold text-navy transition-colors hover:text-navy/80"
                 >
                   FAQ
                 </Link>
                 <Link
                     href="/testimonials"
                   onClick={closeMobileMenu}
-                  className="text-xl font-medium text-navy transition-colors hover:text-navy/80"
+                  className="text-xl font-bold text-navy transition-colors hover:text-navy/80"
                 >
                   Testimonials
                 </Link>
@@ -185,23 +185,17 @@ export default function Navbar({ color = 'white' }: { color?: 'white' | 'black' 
                 <Link
                   href="/register"
                   onClick={closeMobileMenu}
-                  className="flex items-center justify-center gap-2 rounded-lg bg-navy px-6 py-4 text-base font-semibold text-white shadow-lg transition-all hover:bg-navy/90 hover:shadow-xl"
+                  className="flex items-center justify-center uppercase gap-2 rounded-xl bg-[#0A2342] px-2 py-4 font-semibold text-white text-3xl transition-all hover:bg-navy/90"
+                  style={{
+                    boxShadow: '0px 4px 4px 0px rgba(0,0,0,0.25)'
+                  }}
                 >
-                  Apply Now
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
+Register
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 12H19" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 5L19 12L12 19" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
                 </Link>
               </div>
             </nav>

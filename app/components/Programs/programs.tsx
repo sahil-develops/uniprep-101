@@ -108,12 +108,12 @@ const ProgramCard = ({
       {/* Content Section */}
       <div className="p-3 sm:p-4">
         {/* Title */}
-        <h3 className="text-2xl sm:text-3xl font-bold text-neutral-900 mb-0">
+        <h3 className="text-2xl sm:text-3xl font-bold text-neutral-900 mb-0"> 
           {title}
         </h3>
 
         {/* Description */}
-        <p className="text-base  sm:text-base text-neutral-700 mb-4 leading-5 relative bg-white  py-10 sm:py-12 lg:py-12 px-4 sm:px-6 lg:px-12 lg:leading-relaxed">
+        <p className="text-base  sm:text-base text-neutral-700 mb-4 leading-5 relative bg-white  py-2 lg:leading-relaxed">
           {description}
         </p>
 

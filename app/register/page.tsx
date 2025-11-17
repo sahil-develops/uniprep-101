@@ -27,7 +27,7 @@ export default function RegisterPage() {
 </svg>
 
                 </div>
-                <span className="text-base text-navy">+66 9876543210</span>
+                <span className="text-base text-navy">+65 9799 3310</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full ">

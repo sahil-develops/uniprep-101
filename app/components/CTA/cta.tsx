@@ -28,7 +28,7 @@ const CTA = () => {
         </h2>
 
         {/* Paragraph */}
-        <p className="text-xl sm:text-lg md:text-xl text-center text-white mb-4 sm:mb-10 lg:mb-12 leading-relaxed max-w-3xl mx-auto">
+        <p className="text-xl sm:text-lg md:text-xl text-center text-white mb-4 sm:mb-10 lg:mb-12 leading-7 lg:leading-relaxed lg:px-0 px-2 max-w-3xl mx-auto">
           Set yourself apart by enrolling in our residential bootcamps and take the first step towards standing out when applying to undergrad universities!
         </p>
 

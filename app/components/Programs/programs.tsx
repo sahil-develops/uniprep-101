@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 
 const Programs = () => {
   return (
-    <section className="relative bg-[#F7F3E3] py-12 sm:py-16 lg:py-10 px-4 sm:px-6 lg:px-8">
+    <section className="relative bg-[#F7F3E3] py-4 sm:py-16 lg:py-10 px-4 sm:px-6 lg:px-8">
       {/* Background with wavy pattern */}
       {/* <div className="absolute inset-0 z-0">
         <Image
@@ -21,7 +21,7 @@ const Programs = () => {
       
       <div className="relative max-w-7xl mx-auto">
         {/* Section Title */}
-        <h2 className="text-balance text-2xl font-bold text-black mb-6 sm:text-4xl lg:text-[32px]">
+        <h2 className="text-balance text-[28px] font-bold text-black mb-6 sm:text-4xl lg:text-[32px]">
           Our Programs
         </h2>
 
@@ -106,21 +106,21 @@ const ProgramCard = ({
       </div>
 
       {/* Content Section */}
-      <div className="p-6 sm:p-4">
+      <div className="p-3 sm:p-4">
         {/* Title */}
         <h3 className="text-2xl sm:text-3xl font-bold text-neutral-900 mb-0">
           {title}
         </h3>
 
         {/* Description */}
-        <p className="text-sm sm:text-base text-neutral-700 mb-4 leading-relaxed">
+        <p className="text-base  sm:text-base text-neutral-700 mb-4 leading-5 relative bg-white  py-10 sm:py-12 lg:py-12 px-4 sm:px-6 lg:px-12 lg:leading-relaxed">
           {description}
         </p>
 
         {/* Program Details Grid */}
-        <div className="grid grid-cols-2 gap-4 sm:gap-6">
+        <div className="grid grid-cols-2 gap-0 lg:gap-y-0 gap-y-3 sm:gap-6">
           {/* University */}
-          <div className="flex items-start gap-3">
+          <div className="flex items-start gap-1 lg:gap-3">
             <div className="relative w-6 h-6 sm:w-7 sm:h-7 shrink-0 mt-1">
               <Image
                 src={universityIcon}
@@ -143,7 +143,7 @@ const ProgramCard = ({
           </div>
 
           {/* Class Size */}
-          <div className="flex items-start gap-3">
+          <div className="flex items-start gap-1 lg:gap-3">
             <div className="relative w-6 h-6 sm:w-7 sm:h-7 shrink-0 mt-1">
               <Image
                 src="/users.png"

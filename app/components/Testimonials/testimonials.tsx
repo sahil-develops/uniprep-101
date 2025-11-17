@@ -63,9 +63,9 @@ const Testimonials = ({ withBackground = false }: TestimonialsProps) => {
         </div>
       )}
 
-      <section className={`relative ${withBackground ? "bg-transparent " : "bg-white"}  py-10 sm:py-12 lg:py-12 px-4 sm:px-6 lg:px-12`}>
+      <section className={`relative ${withBackground ? "bg-transparent " : "bg-white"}  py-5 sm:py-12 lg:py-12 px-4 sm:px-6 lg:px-12`}>
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-2xl lg:text-[32px] sm:text-4xl md:text-5xl font-bold text-neutral-900 mb-8 sm:mb-12">
+          <h1 className="text-[28px] lg:text-[32px] sm:text-4xl md:text-5xl font-bold text-neutral-900 mb-8 sm:mb-12">
             {!withBackground && (
               <>Student{" "}</>
               )}
@@ -131,7 +131,7 @@ const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
               {testimonial.name}
             </h3>
             <div className="flex items-center gap-2">
-              <p className="text-[10px] sm:text-base text-nowrap text-neutral-600">
+              <p className="text-xs sm:text-base text-nowrap text-neutral-600">
                 Student: {testimonial.university}
               </p>
               {testimonial.logoSrc && (

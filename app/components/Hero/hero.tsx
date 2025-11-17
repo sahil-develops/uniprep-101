@@ -22,7 +22,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-4 text-center sm:px-6 lg:px-8">
         {/* Main Heading */}
-        <h1 className="mb-6 text-4xl leading-tight font-light text-white sm:text-5xl md:text-6xl lg:text-7xl">
+        <h1 className="mb-6 text-5xl leading-tight font-light text-white sm:text-5xl md:text-6xl lg:text-7xl">
           {/* Mobile Layout: 4 lines */}
           <span className="block sm:hidden">
             Certified by{' '}<br/>
@@ -49,16 +49,16 @@ export default function Hero() {
         </h1>
 
         {/* Sub-heading */}
-        <p className="mb-14 max-w-2xl text-lg font-medium text-white sm:text-xl  md:text-2xl font-red-hat">
+        <p className="mb-44 max-w-xl px-9 text-xl font-normal text-white sm:text-xl  md:text-2xl font-red-hat">
           Join our Singapore residential bootcamps to gain a university based
           certification and an edge in global admissions.
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col items-center gap-5 ">
+        <div className="flex flex-col items-center gap-2 lg:gap-5 ">
           <Link
             href="/our-programs"
-            className="rounded-[5.18px] bg-primary px-[32px] py-2 text-base font-normal text-black  sm:text-lg lg:text-2xl"
+            className="rounded-[4px] lg:rounded-[5.18px] bg-primary px-10 lg:px-[32px] py-1.5 lg:py-2 text-lg font-semibold text-black  sm:text-lg lg:text-2xl"
           >
             Explore Programs
           </Link>

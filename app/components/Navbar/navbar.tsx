@@ -32,6 +32,7 @@ export default function Navbar({ color = 'white' }: { color?: 'white' | 'black' 
       <nav
         className="absolute inset-x-0 top-0 z-50 bg-transparent transition-colors duration-300 hover:bg-navy group"
       >
+        
         <div className="lg:mx-auto w-full lg:max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-20 items-start lg:items-center justify-between py-4 lg:py-0">
             {/* Logo and Left Navigation */}
@@ -83,11 +84,11 @@ export default function Navbar({ color = 'white' }: { color?: 'white' | 'black' 
               >
                 Sign Up
               </Link>
-              
+              <div className="absolute inset-0 z-0 bg-linear-to-b from-black/60 via-black/30 to-transparent md:hidden"></div>
               {/* Mobile Menu Button (Hamburger) */}
               <button
                 onClick={toggleMobileMenu}
-                className="flex flex-col gap-1.5 p-2 md:hidden"
+                className="flex flex-col gap-1.5 p-2 z-50 md:hidden"
                 aria-label="Toggle mobile menu"
               >
                 <span className={`h-0.5 w-6 ${color === 'white' ? 'bg-white' : 'bg-navy'} transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
@@ -108,11 +109,12 @@ export default function Navbar({ color = 'white' }: { color?: 'white' | 'black' 
         }`}
         onClick={closeMobileMenu}
       >
-        {/* Background Overlay */}
+        {/* Background Overlay with Black Gradient */}
+      
  
         {/* Slide-in Menu */}
         <div
-          className="absolute right-0 top-0 h-full w-[70%] bg-primary shadow-2xl"
+          className="absolute right-0 top-0 z-10 h-full w-[70%] bg-primary shadow-2xl"
           onClick={(e) => e.stopPropagation()}
         >
           <div className="flex h-full flex-col">

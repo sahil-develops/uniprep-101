@@ -36,7 +36,7 @@ export default function AboutUniversities() {
           Our Certifying Universities
           </h2>
           <p className="text-base lg:leading-7 text-[#35436B] sm:text-lg text-left">
-            UniPrep101 is very pleased to work with two of Singapore's most prestigious universities for our STEM and Business bootcamps. This gives students unprecedented access to world class facilities, renowned faculty and cutting edge content.
+            UniPrep101 is very pleased to work with two of Singapore&apos;s most prestigious universities for our STEM and Business bootcamps. This gives students unprecedented access to world class facilities, renowned faculty and cutting edge content.
           </p>
         </div>
 

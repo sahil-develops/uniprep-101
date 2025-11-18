@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
-export default function Navbar({ color = 'white' }: { color?: 'white' | 'black' }) {
+export default function Navbar({ color = 'white' }: { color?: 'white' | 'black',  }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Prevent body scroll when mobile menu is open
@@ -85,6 +85,7 @@ export default function Navbar({ color = 'white' }: { color?: 'white' | 'black' 
               >
                 Sign Up
               </Link>
+
               <div className="absolute inset-0 z-0 bg-linear-to-b from-black/60 via-black/30 to-transparent md:hidden"></div>
               {/* Mobile Menu Button (Hamburger) */}
               <button

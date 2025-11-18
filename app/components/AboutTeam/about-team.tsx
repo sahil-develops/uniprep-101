@@ -49,17 +49,17 @@ export default function AboutTeam() {
         <div className="absolute inset-0 bg-[#02153A]/20" />
       </div>
 
-      <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center px-4 py-14 text-white sm:px-6 lg:px-8 lg:py-24">
+      <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center px-4 py-5 text-white sm:px-6 lg:px-8 lg:py-24">
         <div className="flex flex-col items-center text-center">
-          <h2 className="text-balance text-2xl font-bold text-white sm:text-4xl lg:text-5xl">
+          <h2 className="text-[28px] text-2xl font-bold text-white sm:text-4xl lg:text-5xl">
             Meet Our Founder
           </h2>
-          <p className="mt-3 max-w-2xl text-base text-white/80 sm:text-lg">
+          <p className="mt-3 max-w-2xl text-base text-white sm:text-lg">
             Experienced educators and professionals dedicated to your success
           </p>
         </div>
 
-        <div className="mt-12 flex w-full flex-col lg:flex-row gap-8">
+        <div className="lg:mt-12 mt-5 flex w-full flex-col lg:flex-row gap-8">
           {teamMembers.map((member) => (
             <TeamMemberCard key={member.name} member={member} />
           ))}

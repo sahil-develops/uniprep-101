@@ -16,7 +16,7 @@ const CampusCollage = ({ image1, alt1 = "University Campus" }: CampusCollageProp
         >
           <div className="grid grid-cols-1  gap-4 sm:gap-6 lg:gap-8">
             {/* First Image */}
-            <div className="relative w-full h-64 sm:h-80 lg:h-96 rounded-2xl overflow-hidden  ">
+            <div className="relative w-full h-60 sm:h-80 lg:h-96 rounded-2xl overflow-hidden  ">
               <div className="relative w-full h-full rounded-xl overflow-hidden">
                 <Image
                   src={image1}

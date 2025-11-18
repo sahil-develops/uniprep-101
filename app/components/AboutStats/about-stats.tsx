@@ -36,19 +36,19 @@ const stats = [
 
 export default function AboutStats() {
   return (
-    <section className="bg-linear-to-tr from-white  to-[#C9E1FF]  py-20">
+    <section className="bg-linear-to-tr from-white  to-[#C9E1FF] py-4 lg:py-20">
       <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
         {/* <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary">Our impact</p> */}
         <h2 className="mt-4 text-3xl font-bold text-[#0A1431] sm:text-4xl">Our Impact in Numbers</h2>
-        <p className="mx-auto mt-6 max-w-3xl text-lg text-[#35436B]">
+        <p className="mx-auto lg:mt-6 mt-2 max-w-3xl text-lg text-[#35436B]">
         Measurable results that reflect our commitment to student success
         </p>
 
-        <dl className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <dl className="lg:mt-12 mt-5 grid lg:gap-8 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {stats.map((item) => (
             <div
               key={item.label}
-              className="rounded-2xl bg-white px-6 py-10 shadow-xl flex flex-col gap-y-0 justify-center items-center "
+              className="rounded-2xl bg-white  px-6 py-10 shadow-2xl lg:shadow-xl flex flex-col gap-y-0 justify-center items-center "
             >
               <span className='mb-2'>
 

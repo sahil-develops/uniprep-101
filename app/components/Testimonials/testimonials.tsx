@@ -123,11 +123,11 @@ const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
       </p>
 
       {/* Student Info and Bootcamp Tag */}
-      <div className="flex flex-row items-end justify-between gap-4">
+      <div className="flex flex-row items-start justify-between lg:gap-4 gap-2">
         {/* Left: Student Info */}
         <div className="flex items-start gap-3">
           <div>
-            <h3 className="text-sm sm:text-base font-bold text-neutral-900 mb-1">
+            <h3 className="text-xs sm:text-base font-bold text-neutral-900 mb-0">
               {testimonial.name}
             </h3>
             <div className="flex items-center gap-2">
@@ -153,7 +153,7 @@ const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
         {testimonial.bootcamp && (
           <div className="shrink-0">
             <span
-              className="inline-block px-3 py-2 rounded-full text-white text-[9px] lg:text-sm sm:text-baseline font-semibold whitespace-nowrap"
+              className="inline-block px-2 lg:px-3 py-1.5 lg:py-2 rounded-full text-white text-[9px] lg:text-sm sm:text-baseline font-semibold whitespace-nowrap"
               style={{ backgroundColor: bootcampBgColor }}
             >
               {testimonial.bootcamp}

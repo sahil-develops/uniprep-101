@@ -16,7 +16,7 @@ export default function AboutHero() {
         <div className="absolute inset-0 bg-[#031942]/70" />
       </div>
 
-      <div className="relative z-10 mx-auto flex min-h-[70vh] max-w-4xl flex-col items-center justify-center gap-6 px-4 py-24 text-center text-white sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto flex lg:min-h-[70vh] min-h-[50vh] max-w-4xl flex-col items-center justify-end lg:justify-center gap-6 px-4 lg:py-24 py-4 text-center text-white sm:px-6 lg:px-8">
       
         <h1 className="text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">
           Bridging Dreams and Destinations
@@ -26,7 +26,7 @@ export default function AboutHero() {
         </p>
         <Link
           href="/our-programs"
-          className="rounded-lg bg-primary px-8 py-3 text-base font-semibold text-white shadow-lg transition hover:translate-y-0.5 hover:bg-[#f5a623] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:text-lg"
+          className="rounded-[4px] bg-primary px-12 lg:px-8 lg:py-3 py-2 text-base font-semibold text-white shadow-lg transition hover:translate-y-0.5 hover:bg-[#f5a623] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:text-lg"
         >
           Explore Programs
         </Link>

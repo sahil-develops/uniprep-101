@@ -34,7 +34,7 @@ const Marquee = () => {
       <div className="h-1 w-full" style={{ backgroundColor: '#081B34' }}></div>
       
       {/* Header with yellow highlight */}
-      <div className="py-8 sm:py-12 px-4">
+      <div className="py-4 sm:py-12 px-4">
       <h2 className="text-left text-xl  max-w-7xl mx-auto sm:text-3xl md:text-4xl lg:text-[32px] font-medium text-neutral-900 mb-0 sm:mb-0">
           <span className="relative inline-block font-bold">
             <span className="relative z-10"> Our Alumni Are Now Studying At.</span>
@@ -59,21 +59,21 @@ const Marquee = () => {
           </div>
         </div>
       </div>
-<hr className="border-t-2 border-[#D9D9D9] w-4/5 mx-auto"/>
+<hr className="border-t-2 border-[#D9D9D9] w-11/12 mx-auto"/>
       {/* Statistics Section */}
       <div className="">
-        <div className="py-8 sm:py-12 px-4 max-w-7xl mx-auto">
+        <div className="py-4 sm:py-12 px-1 lg:px-4 max-w-7xl mx-auto">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-              <Statistic 
-                number="10+" 
-                description="Universities Attended by Alumni" 
-                color="blue" 
-              />
               <Statistic 
                 number="250+" 
                 description="Students Graduated" 
                 color="orange" 
+              />
+              <Statistic 
+                number="10+" 
+                description="Universities Attended by Alumni" 
+                color="blue" 
               />
               <Statistic 
                 number="9" 
@@ -112,7 +112,7 @@ const Statistic = ({
       >
         {number}
       </div>
-      <p className="text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl text-neutral-800 font-normal leading-tight mx-auto">
+      <p className="text-sm sm:text-sm md:text-base lg:text-xl xl:text-2xl text-neutral-800 font-normal leading-tight mx-auto">
         {description === "Universities Attended by Alumni" ? (
           <>
             Universities Attended by<br />Alumni

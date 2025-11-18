@@ -64,12 +64,12 @@ const ProgramCard = ({ data,program }: ProgramCardProps) => {
         </h3>
 
         {/* Description */}
-        <p className="text-base sm:text-lg text-neutral-700 mb-6 leading-relaxed">
+        <p className="text-base sm:text-lg text-neutral-700 mb-2 lg:mb-6 leading-relaxed">
           {data.description}
         </p>
 
         {/* Program Details Grid */}
-        <div className="grid grid-cols-2 gap-4 sm:gap-x-6 sm:gap-y-4 mb-8">
+        <div className="grid grid-cols-2 gap-2 sm:gap-x-6 sm:gap-y-4 mb-8">
           {/* University */}
           <div className="flex items-center gap-3">
             <div className="relative w-7 h-7 shrink-0 mt-1">
@@ -82,7 +82,7 @@ const ProgramCard = ({ data,program }: ProgramCardProps) => {
               />
             </div>
             <div className="flex-1">
-              <p className="text-sm font-bold text-neutral-800 leading-tight">
+              <p className="text-xs lg:text-sm font-bold text-neutral-800 leading-tight">
                 {data.university.name}
               </p>
             </div>
@@ -101,7 +101,7 @@ const ProgramCard = ({ data,program }: ProgramCardProps) => {
             </div>
             <div className="flex-1">
               <p className="text-sm font-medium text-neutral-800">
-                <span className="block font-bold">Class</span>
+                <span className="block lg:text-sm text-xs font-bold">Class</span>
                 <span className="text-sm text-neutral-600">{data.classSize} Students Max</span>
               </p>
             </div>
@@ -120,7 +120,7 @@ const ProgramCard = ({ data,program }: ProgramCardProps) => {
             </div>
             <div className="flex-1">
               <p className="text-sm font-medium text-neutral-800">
-                <span className="block font-bold">Eligibility</span>
+                <span className="block lg:text-sm text-xs font-bold">Eligibility</span>
                 <span className="text-sm text-neutral-600">{data.eligibility}</span>
               </p>
             </div>
@@ -139,7 +139,7 @@ const ProgramCard = ({ data,program }: ProgramCardProps) => {
             </div>
             <div className="flex-1">
               <p className="text-sm font-medium text-neutral-800">
-                <span className="block font-bold">Includes</span>
+                <span className="block lg:text-sm text-xs font-bold">Includes</span>
                 <span className="text-sm text-neutral-600">{data.includes}</span>
               </p>
             </div>
@@ -191,14 +191,14 @@ const ProgramCard = ({ data,program }: ProgramCardProps) => {
 
         {/* Pricing Section */}
         <div className="border-t border-neutral-200 pt-6">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-2">
+          <div className="flex flex-row items-center justify-between lg:justify-center gap-2 lg:px-0 px-4">
             <div>
-              <p className="text-lg text-black mb-1 font-semibold text-center">Starting from</p>
-              <p className="text-3xl sm:text-4xl font-bold text-primary">
+              <p className="text-lg lg:block hidden text-black mb-1 font-semibold text-center">Starting from</p>
+              <p className="text-4xl sm:text-4xl font-bold text-[#FF6600]">
                 {data.price}
               </p>
             </div>
-            <p className="text-xs sm:text-sm max-w-36 text-center text-neutral-500">
+            <p className="text-sm max-w-36 text-center text-[#0A2342]">
               *optional pricing without housing and meals available
             </p>
           </div>

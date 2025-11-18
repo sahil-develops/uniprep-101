@@ -152,20 +152,20 @@ const DayItinerary = () => {
   };
 
   return (
-    <section className="relative bg-[#F7F3E3] py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+    <section className="relative bg-[#F7F3E3] py-5 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-10 sm:mb-12 lg:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-navy mb-4 sm:mb-6">
+        <div className="text-center mb-5 sm:mb-12 lg:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-navy mb-0 sm:mb-6">
             Detailed Day Itinerary
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-neutral-700 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base text-center sm:text-lg md:text-xl text-neutral-700 lg:px-0 px-8 lg:max-w-3xl mx-auto leading-relaxed">
             Every day is carefully planned to maximize learning and cultural immersion
           </p>
         </div>
 
         {/* Itinerary Cards */}
-        <div className="space-y-6 sm:space-y-8">
+        <div className="space-y-3  sm:space-y-8">
           {dayItineraryData.map((day, index) => (
             <DayCard
               key={index}
@@ -192,7 +192,7 @@ const DayCard = ({ day, index, isExpanded, onToggle }: DayCardProps) => {
   const imageOnLeft = day.imagePosition === 'left';
   
   return (
-    <div className="bg-white rounded-2xl sm:rounded-3xl shadow-lg overflow-hidden ">
+    <div className="bg-white rounded-2xl lg:shadow-none  sm:rounded-3xl shadow-lg overflow-hidden ">
       {/* Mobile Accordion Header */}
       <button
         onClick={() => onToggle(index)}

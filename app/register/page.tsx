@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function RegisterPage() {
   return (
     <>
-      <Navbar color='black' />
+      <Navbar color='black'  />
       <main className="min-h-screen bg-white pb-16 pt-20">
         <section className="mx-auto w-full max-w-4xl rounded-3xl bg-white px-6 py-12  sm:px-10 lg:px-14">
           <RegisterForm />

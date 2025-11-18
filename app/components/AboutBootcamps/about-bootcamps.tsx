@@ -48,8 +48,8 @@ const SlideCard = ({ title, description }: { title: string; description: string 
 
 export default function AboutBootcamps() {
   return (
-    <section className="bg-[#F7F3E3] py-20">
-      <div className="mx-auto flex max-w-7xl flex-col gap-12 px-4 sm:px-6 lg:px-8">
+    <section className="bg-[#F7F3E3] lg:py-20 py-5">
+      <div className="mx-auto flex max-w-7xl flex-col lg:gap-12 gap-5 px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center text-center">
           <h2 className="text-balance text-2xl font-bold text-[#0A1431] sm:text-4xl lg:text-5xl">
             How Our Bootcamps Work
@@ -124,7 +124,7 @@ export default function AboutBootcamps() {
 
       <style jsx global>{`
         .about-bootcamps-swiper {
-          padding-bottom: 3.25rem;
+          padding-bottom: 1.25rem;
         }
 
         .about-bootcamps-swiper-desktop {

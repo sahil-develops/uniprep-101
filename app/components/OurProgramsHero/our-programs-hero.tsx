@@ -16,12 +16,12 @@ export default function OurProgramsHero() {
       eligibility: "Grades 10-12",
       includes: "Housing and Meals",
       highlights: [
-        "SUTD Lab Access",
-        "Foundations of Human-Centered Design",
+        "Design Innovation With AI",
+        "Smart Robotics Workshop",
         "Application of Rapid Ideation and Sketching Methods",
         "Prototyping Design Solutions with Physical and Digital tools",
         "Team Collaboration with Mentor Guidance",
-        "Tech Start-Up Visits",
+        "Tech Company Visits",
         "Industry Mentorship Sessions"
       ],
       price: "$4,500",
@@ -39,13 +39,12 @@ export default function OurProgramsHero() {
       eligibility: "Grades 10-12",
       includes: "Housing and Meals",
       highlights: [
-        "SUTD Lab Access",
-        "Foundations of Human-Centered Design",
-        "Application of Rapid Ideation and Sketching Methods",
-        "Prototyping Design Solutions with Physical and Digital tools",
-        "Team Collaboration with Mentor Guidance",
-        "Tech Start-Up Visits",
-        "Industry Mentorship Sessions"
+        "Holistic qualitative and quantitative analysis",
+        "Addressing real life business problems",
+        "Problem solving techniques to achieve tangible business outcomes",
+        "Business Design thinking team challenge with final presentation",
+        "SMU Campus Tour",
+        "Start-Up Entrepreneurship Sessions",
       ],
       price: "$6,250",
       redirectUrl: "/business-prep"
@@ -69,22 +68,20 @@ export default function OurProgramsHero() {
       {/* Content */}
       <div className="relative z-10 max-w-7xl py-5 mx-auto text-center">
         {/* Title */}
-        <h1 className="text-balance text-2xl font-bold text-white mb-6 sm:text-4xl lg:text-5xl">
+        <h1 className="text-balance text-[28px] font-bold text-white mb-6 sm:text-4xl lg:text-5xl">
           Our Programs
         </h1>
 
         {/* Description */}
         <div className="max-w-5xl mx-auto space-y-4">
-          <p className="text-base sm:text-lg md:text-lg text-white leading-relaxed">
-            Come to sunny, safe, and modern Singapore for our residential summer programs - a truly transformative experience.
-          </p>
-          <p className="text-base sm:text-lg md:text-lg text-white leading-relaxed">
+        
+          <p className="text-base sm:text-lg lg:px-0 px-2 md:text-lg text-white leading-relaxed">
             With certifications from two of Singapore&apos;s leading universities, our programs combine academic excellence, immersive workshops and real-world exposure all in the country&apos;s world-class, dynamic environment.
           </p>
         </div>
       </div>
        {/* Programs Section */}
-       <section className="relative  py-12 sm:py-16 lg:py-10 sm:px-6 lg:px-8">
+       <section className="relative  py-2 sm:py-16 lg:py-10 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Program Cards Container */}
           <div className="grid md:grid-cols-2 gap-6 sm:gap-8 lg:gap-20 ">

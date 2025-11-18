@@ -113,7 +113,7 @@ const ProgramCard = ({
         </h3>
 
         {/* Description */}
-        <p className="text-base  sm:text-base text-neutral-700 mb-4 leading-5 relative bg-white  py-2 lg:leading-relaxed">
+        <p className="text-base  sm:text-base text-neutral-700 mb-1 lg:mb-4 leading-5 relative bg-white  py-2 lg:leading-relaxed">
           {description}
         </p>
 

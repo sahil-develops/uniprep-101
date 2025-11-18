@@ -15,13 +15,13 @@ interface IncludedCardProps {
 const IncludedCard = ({ item }: IncludedCardProps) => {
   return (
     <div
-      className="bg-white rounded-[35px] p-6 sm:p-8 h-full flex flex-col items-center justify-center"
+      className="bg-white rounded-[20px] lg:rounded-[35px] lg:py-8 lg:px-8 py-2 px-4 h-full flex flex-col items-center justify-center"
       style={{
         boxShadow: "0px 6.95px 6.95px 0px rgba(0, 0, 0, 0.25)"
       }}
     >
       {/* Icon */}
-      <div className="relative w-16 h-16 sm:w-20 sm:h-20 mb-4">
+      <div className="relative w-8 h-8 sm:w-20 sm:h-20 lg:mb-4 mb-2">
         <Image
           src={item.icon}
           alt={item.title}
@@ -32,12 +32,12 @@ const IncludedCard = ({ item }: IncludedCardProps) => {
       </div>
 
       {/* Title */}
-      <h3 className="text-xl sm:text-2xl font-bold text-neutral-900 mb-1">
+      <h3 className="text-sm sm:text-2xl font-bold text-neutral-900 mb-1">
         {item.title}
       </h3>
 
       {/* Description */}
-      <p className="text-sm sm:text-xl text-neutral-700 leading-relaxed text-center">
+      <p className="text-xs sm:text-xl text-neutral-700 lg:leading-relaxed text-center">
         {item.description}
       </p>
     </div>
@@ -53,7 +53,7 @@ const WhatsIncluded = () => {
     },
     {
       title: "Housing",
-      description: "Modern student housing near campus with all amenities.",
+      description: "Hotel accommodation including amenitities.",
       icon: "/School.png"
     },
     {
@@ -92,7 +92,7 @@ const WhatsIncluded = () => {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-x-2 gap-y-4 sm:gap-x-8 sm:gap-y-8">
           {includedItems.map((item, index) => (
             <IncludedCard key={index} item={item} />
           ))}

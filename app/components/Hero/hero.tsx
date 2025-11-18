@@ -49,7 +49,7 @@ export default function Hero() {
         </h1>
 
         {/* Sub-heading */}
-        <p className="mb-44 max-w-xl px-9 text-xl font-normal text-white sm:text-xl  md:text-2xl font-red-hat">
+        <p className="mb-44 lg:mb-20 max-w-xl px-9 text-xl font-normal text-white sm:text-xl  md:text-2xl font-red-hat">
           Join our Singapore residential bootcamps to gain a university based
           certification and an edge in global admissions.
         </p>

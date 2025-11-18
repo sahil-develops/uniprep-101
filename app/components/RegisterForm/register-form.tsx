@@ -47,13 +47,6 @@ export default function RegisterForm() {
     }));
   };
 
-  const handleProgramSelect = (program: 'stemprep' | 'bizprep') => {
-    setFormData((prev) => ({
-      ...prev,
-      selectedProgram: program,
-      program: program,
-    }));
-  };
 
   const validateForm = (): boolean => {
     if (!formData.firstName.trim()) {

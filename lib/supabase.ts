@@ -10,6 +10,13 @@ if (!supabaseUrl || !supabaseAnonKey) {
   );
 }
 
-// Create and export Supabase client
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+// Create and export Supabase client with better error handling
+export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+  auth: {
+    persistSession: false, // Don't persist session for server-side usage
+  },
+  db: {
+    schema: 'public',
+  },
+});
 

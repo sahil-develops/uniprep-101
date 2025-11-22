@@ -24,7 +24,7 @@ export default function OurProgramsHero() {
         "Tech Company Visits",
         "Industry Mentorship Sessions"
       ],
-      price: "$4,500",
+      price: "$5,250",
       redirectUrl: "/stem-prep"
     },
     {
@@ -46,7 +46,7 @@ export default function OurProgramsHero() {
         "SMU Campus Tour",
         "Start-Up Entrepreneurship Sessions",
       ],
-      price: "$6,250",
+      price: "$7,250",
       redirectUrl: "/business-prep"
     }
   ];

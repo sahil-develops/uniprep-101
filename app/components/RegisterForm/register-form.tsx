@@ -61,14 +61,7 @@ export default function RegisterForm() {
       setSubmitStatus({ type: 'error', message: 'Please enter a valid email address' });
       return false;
     }
-    if (!formData.phone.trim()) {
-      setSubmitStatus({ type: 'error', message: 'Please enter your phone number' });
-      return false;
-    }
-    if (!formData.country) {
-      setSubmitStatus({ type: 'error', message: 'Please select your country' });
-      return false;
-    }
+  
     if (!formData.program) {
       setSubmitStatus({ type: 'error', message: 'Please select a program' });
       return false;
@@ -127,8 +120,8 @@ export default function RegisterForm() {
           firstName: formData.firstName,
           lastName: formData.lastName,
           email: formData.email,
-          phone: formData.phone,
-          country: formData.country,
+          phone: formData.phone || null,
+          country: formData.country || null,
           program: formData.program === 'stemprep' ? 'STEMPrep' : 'BizPrep',
           message: formData.message || null,
         }),
@@ -136,9 +129,15 @@ export default function RegisterForm() {
 
       if (!dbResponse.ok) {
         const errorData = await dbResponse.json();
-        // Email was sent but database save failed - log error but don't fail the form
         console.error('Database save error:', errorData);
-        // You can choose to show a warning or just log it
+        
+        // Show error to user
+        setSubmitStatus({
+          type: 'error',
+          message: errorData.error || 'Failed to save registration. Please try again or contact us directly.',
+        });
+        setIsSubmitting(false);
+        return;
       }
 
       setSubmitStatus({
@@ -183,8 +182,7 @@ export default function RegisterForm() {
         
 
         <p className="text-center text-sm font-medium text-[#4B5875] sm:text-base">
-          Only applicable to grades 10-12. All candidates will be interviewed prior to final
-          confirmation and payment.
+        Only students from Grades 10- 12 are eligible to apply for these programs. A video call will be scheduled will all candidates prior to final confirmation and payment
         </p>
       </div>
 
@@ -249,7 +247,7 @@ export default function RegisterForm() {
 
         <div className="flex flex-col gap-2">
           <label className="text-sm font-semibold text-navy" htmlFor="phone">
-            Phone Number *
+            Phone Number 
           </label>
           <input
             id="phone"
@@ -257,7 +255,7 @@ export default function RegisterForm() {
             value={formData.phone}
             onChange={handleInputChange}
             placeholder="+91 98765 43210"
-            required
+       
             pattern="^\+?[1-9]\d{1,14}$"
             title="Please enter a valid phone number"
     
@@ -267,13 +265,13 @@ export default function RegisterForm() {
 
         <div className="flex flex-col gap-2">
           <label className="text-sm font-semibold text-navy" htmlFor="country">
-            Country *
+            Country 
           </label>
           <select
             id="country"
             value={formData.country}
             onChange={handleInputChange}
-            required
+    
             className="w-full rounded-[4px] bg-[#0000000D] px-4 py-3 text-black"
           >
             <option value="">Select your country</option>

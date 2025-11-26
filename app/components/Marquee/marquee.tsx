@@ -5,24 +5,24 @@ import { motion } from "framer-motion";
 import { ReactNode } from "react";
 
 const universities = [
-  { name: "Harvard", logo: "/Harvard.png" },
+  { name: "Harvard", logo: "/uniprep.webp" },
   { name: "Stanford", logo: "/Stanford.png" },
-  { name: "Columbia", logo: "/Columbia.png" },
+  { name: "Columbia", logo: "/michigan-png.webp" },
   { name: "UCLA", logo: "/UCLA.png" },
   { name: "Illinois", logo: "/illinois.svg" },
-  { name: "Harvard", logo: "/Harvard.png" },
+  { name: "Harvard", logo: "/uniprep.webp" },
   { name: "Stanford", logo: "/Stanford.png" },
-  { name: "Columbia", logo: "/Columbia.png" },
+  { name: "Columbia", logo: "/michigan-png.webp" },
   { name: "UCLA", logo: "/UCLA.png" },
   { name: "Illinois", logo: "/illinois.svg" },
-  { name: "Harvard", logo: "/Harvard.png" },
+  { name: "Harvard", logo: "/uniprep.webp" },
   { name: "Stanford", logo: "/Stanford.png" },
-  { name: "Columbia", logo: "/Columbia.png" },
+  { name: "Columbia", logo: "/michigan-png.webp" },
   { name: "UCLA", logo: "/UCLA.png" },
   { name: "Illinois", logo: "/illinois.svg" },
-  { name: "Harvard", logo: "/Harvard.png" },
+  { name: "Harvard", logo: "/uniprep.webp" },
   { name: "Stanford", logo: "/Stanford.png" },
-  { name: "Columbia", logo: "/Columbia.png" },
+  { name: "Columbia", logo: "/michigan-png.webp" },
   { name: "UCLA", logo: "/UCLA.png" },
   { name: "Illinois", logo: "/illinois.svg" },
 ];
@@ -82,7 +82,7 @@ const Marquee = () => {
               />
               <Statistic 
                 number="100%" 
-                description="Student Support" 
+                description="Supervised and Secure" 
                 color="orange" 
               />
             </div>

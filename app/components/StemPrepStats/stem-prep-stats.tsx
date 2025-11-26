@@ -23,8 +23,8 @@ const StemPrepStats = () => {
               color="blue" 
             />
             <Statistic 
-              number="24/7" 
-              description="Student Support" 
+              number="100%" 
+              description="Supervised and Secure" 
               color="orange" 
             />
           </div>

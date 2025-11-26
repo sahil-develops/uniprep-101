@@ -6,7 +6,7 @@ type TeamMember = {
   name: string;
   title: string;
   bio: string;
-  detailedBio?: string;
+  detailedBio?: string | React.ReactNode | React.ReactElement;
   imageSrc?: string;
 };
 
@@ -14,10 +14,12 @@ const teamMembers: TeamMember[] = [
   {
     name: 'Dr. Sanjay Kothary',
     title: 'Founder & CEO',
-    bio: 'Former UCLA Professor, 15+ years in education',
-    detailedBio:
-      "Sanjay obtained his Ph.D. in Electrical Engineering from the University of California, Los Angeles and was part of the academic faculty for a brief period there before he decided to launch his own technology business.\n\nA seasoned entrepreneur, he has started and successfully exited from several IT ventures spanning data warehousing, financial technology, cloud computing and cyber security.\n\nIn 2023, he decided to go back to his first passion – education – through this exciting venture, UniPrep101,  and is currently building this as a premium offering that gives all aspiring High School students a unique opportunity to have profile building international academic experiences while still in their senior school years.",
-  },
+    bio: 'Former UCLA Professor, 30+ years in technology and education',
+      detailedBio: <p>Sanjay obtained his Ph.D. in Electrical Engineering from the University of California, Los Angeles and was part of the academic faculty for a brief period there before he decided to launch his own technology business. <br/> <br/>
+  A seasoned entrepreneur, he has started and successfully exited from several IT ventures spanning data warehousing, financial technology, cloud computing and cyber security.  <br/> <br/>
+In 2023, he decided to go back to his first passion – education – through this exciting venture, UniPrep101, and is currently building this as a premium offering that gives all aspiring High School students a unique opportunity to have profile building international academic experiences while still in their senior school years.<br/> <br/>
+</p>
+ },
   // {
   //   name: 'Dr. Nivaan Sheth',
   //   title: 'Program Director',
@@ -102,7 +104,7 @@ function TeamMemberCard({ member }: { member: TeamMember }) {
 
     scheduleTimeout(() => {
       setDisplayedBio((prev) =>
-        prev === member.bio ? member.detailedBio ?? member.bio : member.bio,
+        prev === member.bio ? member.detailedBio as string ?? member.bio : member.bio,
       );
       setIsExpanded((prev) => !prev);
 
@@ -152,7 +154,7 @@ function TeamMemberCard({ member }: { member: TeamMember }) {
           {displayedBio}
         </p>
         {hasDetailedBio && (
-          <span className="text-sm font-medium text-[#FF5A1F]">
+          <span className="text-sm text-left font-medium text-[#FF5A1F] cursor-pointer">
             {isExpanded ? 'Click to collapse bio' : 'Click to read full bio'}
           </span>
         )}

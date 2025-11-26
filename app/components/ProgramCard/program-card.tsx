@@ -28,7 +28,7 @@ interface ProgramCardProps {
 
 const ProgramCard = ({ data,program }: ProgramCardProps) => {
   return (
-    <div className=" rounded-[20px] shadow-lg overflow-hidden w-full">
+    <div className=" rounded-[20px]  overflow-hidden w-full">
       {/* Image Section */}
       {/* <div></div> */}
 
@@ -57,8 +57,10 @@ const ProgramCard = ({ data,program }: ProgramCardProps) => {
 
 
       {/* Content Section */}
-      <div className="p-4 bg-white max-w-2xl w-full rounded-b-[20px]  -translate-y-10">
+      <div className="p-4 bg-white max-w-2xl w-full rounded-b-[20px]  -translate-y-10 h-full ">
         {/* Title */}
+        <div className="flex flex-col gap-4">
+
         <h3 className="text-3xl sm:text-4xl font-bold text-neutral-900 mb-4">
           {data.title}
         </h3>
@@ -79,7 +81,7 @@ const ProgramCard = ({ data,program }: ProgramCardProps) => {
                 fill
                 className="object-contain"
                 sizes="28px"
-              />
+                />
             </div>
             <div className="flex-1">
               <p className="text-xs lg:text-sm font-bold text-neutral-800 leading-tight">
@@ -97,7 +99,7 @@ const ProgramCard = ({ data,program }: ProgramCardProps) => {
                 fill
                 className="object-contain"
                 sizes="28px"
-              />
+                />
             </div>
             <div className="flex-1">
               <p className="text-sm font-medium text-neutral-800">
@@ -116,7 +118,7 @@ const ProgramCard = ({ data,program }: ProgramCardProps) => {
                 fill
                 className="object-contain"
                 sizes="28px"
-              />
+                />
             </div>
             <div className="flex-1">
               <p className="text-sm font-medium text-neutral-800">
@@ -135,7 +137,7 @@ const ProgramCard = ({ data,program }: ProgramCardProps) => {
                 fill
                 className="object-contain"
                 sizes="28px"
-              />
+                />
             </div>
             <div className="flex-1">
               <p className="text-sm font-medium text-neutral-800">
@@ -146,6 +148,7 @@ const ProgramCard = ({ data,program }: ProgramCardProps) => {
           </div>
         </div>
 
+            
         {/* Program Highlights */}
         <div className="mb-8">
           <h4 className="text-lg sm:text-xl font-bold text-neutral-900 mb-4">
@@ -167,8 +170,9 @@ const ProgramCard = ({ data,program }: ProgramCardProps) => {
           </ul>
         </div>
 
+
         {/* Call to Action Buttons */}
-        <div className="mb-6 flex flex-col items-center justify-between gap-4">
+        <div className={`${data.price === "USD 7,250" ? 'pt-6 sm:mt-[67px] lg:mt-12' : 'pt-6'} mb-6 flex flex-col  items-center justify-between gap-4`}>
           <Link href="/register">
           <button className="w-full cursor-pointer sm:w-auto text-lg sm:text-xl bg-primary hover:opacity-90 text-white font-medium px-12 py-2 rounded-lg flex items-center justify-center gap-2 transition-opacity duration-200 mb-0">
             Register Interest
@@ -184,17 +188,18 @@ const ProgramCard = ({ data,program }: ProgramCardProps) => {
             href={data.redirectUrl}
             className="block text-center sm:text-left text-black font-semibold underline underline-offset-4 "
             >
-            View Detailed Programs
+            View Detailed Program
           </Link>
             
         </div>
+        </div>
 
         {/* Pricing Section */}
-        <div className="border-t border-neutral-200 pt-6">
-          <div className="flex flex-row items-center justify-between lg:justify-center gap-2 lg:px-0 px-4">
+        <div className={`border-t border-neutral-200 `}>
+          <div className="flex flex-row items-center justify-between lg:justify-center gap-2 pt-6 lg:px-0 px-4">
             <div>
               <p className="text-lg lg:block hidden text-black mb-1 font-semibold text-center">Starting from</p>
-              <p className="text-4xl sm:text-4xl font-bold text-[#FF6600]">
+              <p className="text-2xl sm:text-4xl font-bold text-[#FF6600]">
                 {data.price}
               </p>
             </div>

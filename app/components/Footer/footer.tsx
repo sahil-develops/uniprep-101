@@ -44,23 +44,7 @@ const Footer = () => {
                   href="/our-programs"
                   className="text-lg sm:text-sm text-white hover:text-primary transition-colors"
                 >
-                  Courses
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/stem-prep"
-                  className="text-lg sm:text-sm text-white hover:text-primary transition-colors"
-                >
-                  STEM Prep
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/business-prep"
-                  className="text-lg sm:text-sm text-white hover:text-primary transition-colors"
-                >
-                  Business Prep
+                  Programs
                 </Link>
               </li>
               <li>
@@ -69,6 +53,14 @@ const Footer = () => {
                   className="text-lg sm:text-sm text-white hover:text-primary transition-colors"
                 >
                   About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/testimonials"
+                  className="text-lg sm:text-sm text-white hover:text-primary transition-colors"
+                >
+                  Testimonials
                 </Link>
               </li>
               <li>

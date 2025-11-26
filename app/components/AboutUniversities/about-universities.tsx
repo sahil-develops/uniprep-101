@@ -33,7 +33,7 @@ export default function AboutUniversities() {
       <div className="mx-auto flex max-w-6xl flex-col gap-4 md:gap-12 px-4 sm:gap-14 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:gap-6 gap-3 text-center lg:max-w-3xl lg:text-left">
           <h2 className="text-left text-2xl font-bold text-[#0A1431] sm:text-4xl lg:text-5xl">
-          Our Certifying Universities
+          Our Partner Universities
           </h2>
           <p className="text-base lg:leading-7 text-[#35436B] sm:text-lg text-left">
             UniPrep101 is very pleased to partner with two of Singapore&apos;s most prestigious universities for our STEM and Business bootcamps. This gives students unprecedented access to world class facilities, renowned faculty and cutting edge content.

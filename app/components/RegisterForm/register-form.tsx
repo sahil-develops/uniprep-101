@@ -297,6 +297,7 @@ export default function RegisterForm() {
             <option value="">Select a program</option>
             <option value="stemprep">STEMPrep</option>
             <option value="bizprep">BizPrep</option>
+            <option value="both">Both</option>
           </select>
         </div>
 

@@ -72,7 +72,7 @@ const WhatsIncluded = () => {
       icon: "/geography.png"
     },
     {
-      title: "24/7 Support",
+      title: "100% Supervised",
       description: "Dedicated program coordinators, student support",
       icon: "/Messaging.png"
     }

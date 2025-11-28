@@ -182,7 +182,7 @@ export default function RegisterForm() {
         
 
         <p className="text-center text-sm font-medium text-[#4B5875] sm:text-base">
-        Only students from Grades 10- 12 are eligible to apply for these programs. A video call will be scheduled will all candidates prior to final confirmation and payment
+        Only students from Grades 10- 12 are eligible to apply for these programs. A video call will be scheduled with all candidates prior to final confirmation and payment.
         </p>
       </div>
 

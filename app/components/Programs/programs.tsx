@@ -29,7 +29,7 @@ const Programs = () => {
         <div className="grid md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10">
           {/* Stem Prep Card */}
           <ProgramCard
-            title="Stem Prep"
+            title="Stem Prep101"
             description="Prepare for higher education in science and technology with immersive workshops and a certification from SUTD, an institute in partnership with the world's #1 tech university - Massachusetts Institute of Technology."
             imageSrc="/Stemp-prep.webp"
             university="Singapore University Of Technology And Design"
@@ -43,7 +43,7 @@ const Programs = () => {
 
           {/* Business Prep Card */}
           <ProgramCard
-            title="Business Prep"
+            title="Business Prep101"
             description="Explore business concepts and learn problem solving skills through hands on workshops and real world insights. Complete the certification from Singapore's top rated business and management university."
             imageSrc="/Business-prep.webp"
             university="Singapore Management University"

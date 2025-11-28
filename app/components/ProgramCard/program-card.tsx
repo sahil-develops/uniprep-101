@@ -62,7 +62,7 @@ const ProgramCard = ({ data,program }: ProgramCardProps) => {
         <div className="flex flex-col gap-4">
 
         <h3 className="text-3xl sm:text-4xl font-bold text-neutral-900 mb-4">
-          {data.title}
+          {data.title + "101"}
         </h3>
 
         {/* Description */}

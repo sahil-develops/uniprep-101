@@ -150,7 +150,7 @@ const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
         </div>
 
         {/* Right: Bootcamp Tag */}
-        {testimonial.bootcamp && (
+        {/* {testimonial.bootcamp && (
           <div className="shrink-0">
             <span
               className="inline-block px-2 lg:px-3 py-1.5 lg:py-2 rounded-full text-white text-[9px] lg:text-sm sm:text-baseline font-semibold whitespace-nowrap"
@@ -159,7 +159,7 @@ const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
               {testimonial.bootcamp}
             </span>
           </div>
-        )}
+        )} */}
       </div>
     </div>
   );

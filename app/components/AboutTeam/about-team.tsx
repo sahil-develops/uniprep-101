@@ -18,7 +18,8 @@ const teamMembers: TeamMember[] = [
       detailedBio: <p>Sanjay obtained his Ph.D. in Electrical Engineering from the University of California, Los Angeles and was part of the academic faculty for a brief period there before he decided to launch his own technology business. <br/> <br/>
   A seasoned entrepreneur, he has started and successfully exited from several IT ventures spanning data warehousing, financial technology, cloud computing and cyber security.  <br/> <br/>
 In 2023, he decided to go back to his first passion – education – through this exciting venture, UniPrep101, and is currently building this as a premium offering that gives all aspiring High School students a unique opportunity to have profile building international academic experiences while still in their senior school years.<br/> <br/>
-</p>
+</p>,
+imageSrc: "/personal-image.png"
  },
   // {
   //   name: 'Dr. Nivaan Sheth',
@@ -57,7 +58,7 @@ export default function AboutTeam() {
             Meet Our Founder
           </h2>
           <p className="mt-3 max-w-2xl text-base text-white sm:text-lg">
-            Experienced educators and professionals dedicated to your success
+          An experienced educator and technopreneur  dedicated to your success
           </p>
         </div>
 

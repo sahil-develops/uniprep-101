@@ -10,13 +10,15 @@ const Footer = () => {
         {/* Logo and Tagline */}
         <div className="text-center mb-5 sm:mb-12 lg:mb-8">
           <div className="flex justify-center lg:mb-4 mb-2">
+            <Link href="/">
             <Image
               src="/logo.svg"
               alt="UNIPREP101 Logo"
               width={300}
               height={57}
               className="h-auto lg:w-72 w-44 "
-            />
+              />
+              </Link>
           </div>
           <p className="text-lg sm:text-base text-white max-w-2xl mx-auto">
             Preparing students for global opportunities through Singapore education
@@ -160,27 +162,7 @@ const Footer = () => {
               </a>
 
               {/* Facebook */}
-              <a
-                href="https://www.facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white hover:text-primary transition-colors"
-                aria-label="Facebook"
-              >
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="w-8 h-8"
-                >
-                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                </svg>
-              </a>
+
             </div>
           </div>
         </div>

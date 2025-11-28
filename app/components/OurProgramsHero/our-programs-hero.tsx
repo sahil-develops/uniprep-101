@@ -5,7 +5,7 @@ import ProgramCard, { ProgramCardData } from '@/app/components/ProgramCard/progr
 export default function OurProgramsHero() {
   const programsData: ProgramCardData[] = [
     {
-      title: "STEM Prep",
+      title: "Stem Prep",
       description: "An immersive bootcamp integrating Design thinking, AI, and Robotics into a bold interdisciplinary experience that empowers students to solve real world problems with purpose and creativity.",
       imageSrc: "/building-2.png",
       university: {

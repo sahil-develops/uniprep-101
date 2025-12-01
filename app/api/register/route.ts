@@ -127,6 +127,15 @@ export async function POST(request: NextRequest) {
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export async function GET(_request: NextRequest) {
   try {
+    // Check if Supabase client is properly initialized
+    if (!supabase) {
+      console.error('Supabase client is not initialized');
+      return NextResponse.json(
+        { error: 'Database connection not configured. Please check your environment variables.' },
+        { status: 500 }
+      );
+    }
+
     const { data, error } = await supabase
       .from('registrations')
       .select('*')

@@ -9,7 +9,7 @@ export default function BusinessPrepPage() {
   return (
     <main className="min-h-screen">
       <Navbar />
-      <StemPrepHero title="Business Prep" 
+      <StemPrepHero title="BizPrep101" 
       />
       <StemPrepStats />
       <DayItinerary />

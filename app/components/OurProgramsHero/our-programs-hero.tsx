@@ -5,7 +5,7 @@ import ProgramCard, { ProgramCardData } from '@/app/components/ProgramCard/progr
 export default function OurProgramsHero() {
   const programsData: ProgramCardData[] = [
     {
-      title: "Stem Prep",
+      title: "StemPrep",
       description: "An immersive bootcamp integrating Design thinking, AI, and Robotics into a bold interdisciplinary experience that empowers students to solve real world problems with purpose and creativity.",
       imageSrc: "/building-2.png",
       university: {
@@ -24,11 +24,11 @@ export default function OurProgramsHero() {
         "Tech Company Visits",
         "Industry Mentorship Sessions"
       ],
-      price: "USD 5,250",
+      price: "USD 5,000",
       redirectUrl: "/stem-prep"
     },
     {
-      title: "Business Prep",
+      title: "BizPrep",
       description: "Master business fundamentals through real case studies, startup pitches, and direct interaction with Singapore's thriving business ecosystem.",
       imageSrc: "/trees-1.png",
       university: {
@@ -47,7 +47,7 @@ export default function OurProgramsHero() {
         "Start-Up Entrepreneurship Sessions",
 
       ],
-      price: "USD 7,250",
+      price: "USD 7,000",
       redirectUrl: "/business-prep"
     }
   ];

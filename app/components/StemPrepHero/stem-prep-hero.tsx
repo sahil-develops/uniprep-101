@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function StemPrepHero({ title = 'STEM Prep' }: { title?: string }) {
+export default function StemPrepHero({ title = 'StemPrep101' }: { title?: string }) {
   return (
     <section className="relative min-h-[85vh] w-full sm:min-h-screen">
       {/* Background Image with Dark Overlay */}

@@ -202,7 +202,7 @@ export default function RegisterForm() {
       <form onSubmit={handleSubmit} className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
         <div className="flex flex-col gap-2">
           <label className="text-sm font-semibold text-navy" htmlFor="first-name">
-            First Name *
+            First Name <span className="text-red-500">*</span>
           </label>
           <input
             id="first-name"
@@ -217,7 +217,7 @@ export default function RegisterForm() {
 
         <div className="flex flex-col gap-2">
           <label className="text-sm font-semibold text-navy" htmlFor="last-name">
-            Last Name *
+            Last Name <span className="text-red-500">*</span>
           </label>
           <input
             id="last-name"
@@ -232,7 +232,7 @@ export default function RegisterForm() {
 
         <div className="flex flex-col gap-2">
           <label className="text-sm font-semibold text-navy" htmlFor="email">
-            Email Address *
+            Email Address <span className="text-red-500">*</span>
           </label>
           <input
             id="email"
@@ -285,7 +285,7 @@ export default function RegisterForm() {
 
         <div className="flex flex-col gap-2">
           <label className="text-sm font-semibold text-navy" htmlFor="program">
-            Program of Interest *
+            Program of Interest <span className="text-red-500">*</span>   
           </label>
           <select
             id="program"
@@ -318,7 +318,13 @@ export default function RegisterForm() {
         <div className="md:col-span-2">
           <button
             type="submit"
-            disabled={isSubmitting}
+            disabled={
+              isSubmitting ||
+              !formData.firstName.trim() ||
+              !formData.lastName.trim() ||
+              !formData.email.trim() ||
+              !formData.program.trim()
+            }
             className="flex lg:w-1/4 w-full mx-auto cursor-pointer items-center justify-center gap-2 rounded-lg bg-primary px-6 py-2 text-base font-semibold text-white transition-transform duration-200 hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
           >
             {isSubmitting ? (

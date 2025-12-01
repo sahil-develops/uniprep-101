@@ -58,7 +58,7 @@ const WhatsIncluded = () => {
     },
     {
       title: "Meals",
-      description: "Daily breakfast, lunch, and cultural dining experiences",
+      description: "Meals and cultural dining experiences",
       icon: "/Meals.png"
     },
     {

@@ -204,7 +204,7 @@ const ProgramCard = ({ data,program }: ProgramCardProps) => {
               </p>
             </div>
             <p className="text-sm max-w-36 text-center text-[#0A2342]">
-              *optional pricing without housing and meals available
+              *Inclusive of hotels, meals, local transport and cultural activities
             </p>
           </div>
         </div>

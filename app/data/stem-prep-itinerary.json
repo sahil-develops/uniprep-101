@@ -1,0 +1,166 @@
+[
+  {
+    "dayTitle": "Day 1",
+    "time": "9am - 5pm",
+    "location": "University Campus",
+    "activities": [
+      "Breakfast at hotel",
+      "Proceed to SUTD campus",
+      "Full-day Session:",
+      "Smart Robotics Workshop",
+      "Introduction to Modular Robots",
+      "Discovering Reconfigurable Robotics",
+      "Coding for Control",
+      "Hands-on Experimentation",
+      "Featured Activities:",
+      "Virtual Robot Challenge: Code and simulate robot in an interactive digital arena.",
+      "Physical Robot Challenge: Program robot to complete real-world missions  and compete in a friendly mini competition!",
+      "Bento Box lunch on campus",
+      "Evening dinner and return to hotel"
+    ],
+    "imageSrc": "/detailed-itenary-1.png",
+    "imageAlt": "Students in hands-on workshop",
+    "imagePosition": "right"
+  },
+  {
+    "dayTitle": "Day 2",
+    "time": "9am - 5pm",
+    "location": "University Campus",
+    "activities": [
+      "Breakfast at hotel",
+      "Proceed to SUTD campus",
+      "Morning session:",
+      "3D Prototyping Studio",
+      "Introduction to 3D printing technologies and workflows.",
+      "Hands-on practice with software for preparing 3D models.",
+      "Operate 3D printers to bring your personal project to life.",
+      "Bento Box lunch on campus",
+      "Afternoon session",
+      "Private guided tour of SUTD's Fabrication Lab and its digital fabrication tools.",
+      "Featured Activity:",
+      "Design and fabricate your very own custom 3D-printed souvenir to take home.",
+      "Evening dinner and return to hotel"
+    ],
+    "imageSrc": "/itenary-2.webp",
+    "imageAlt": "Students in industry exposure session",
+    "imagePosition": "left"
+  },
+  {
+    "dayTitle": "Day 3",
+    "time": "9am - 5pm",
+    "location": "University Campus",
+    "activities": [
+      "Breakfast at hotel",
+      "Proceed to SUTD campus",
+      "Morning Session:",
+      "Design Innovation with AI (Part 1)",
+      "Introduction to SUTD's flagship Design Innovation pedagogy and our design thinking process.",
+      "Discover Phase: Explore stakeholder analysis, personas and scenario development — powered by AI.",
+      "Key Feature:",
+      "Learn how to identify stakeholders, uncover user needs and leverage AI to gain meaningful insights",
+      "Bento Box lunch on campus",
+      "Afternoon session:",
+      "Design Innovation with AI (Part 2)",
+      "Define Phase: Use activity diagrams and frame \"How Might We\" (HMW) questions",
+      "Develop Phase: Apply AI-driven mind mapping to spark creative solutions",
+      "Key Features:",
+      "Evaluate user needs and synthesize insights with AI assistance during the Define Phase.",
+      "Supercharge team ideation and generate multiple innovative concepts through AI-augmented brainstorming in the Develop Phase",
+      "Evening dinner and return to hotel"
+    ],
+    "imageSrc": "/Itenary-3.webp",
+    "imageAlt": "Students in hands-on workshop",
+    "imagePosition": "right"
+  },
+  {
+    "dayTitle": "Day 4",
+    "time": "9am - 5pm",
+    "location": "University Campus",
+    "activities": [
+      "Breakfast at hotel",
+      "Proceed to SUTD campus",
+      "Full day session:",
+      "Project Presentation & Certification",
+      "Engage in hands-on prototyping to refine your ideas",
+      "Learn effective pitching techniques and practice delivering impactful presentations",
+      "Individual team presentations",
+      "Key Feature:",
+      "Bring your ideas to life and showcase your solutions through confident, persuasive pitching.",
+      "Bento Box lunch on campus",
+      "Evening dinner and return to hotel"
+    ],
+    "imageSrc": "/Itenary-4.webp",
+    "imageAlt": "Students in industry exposure session",
+    "imagePosition": "left"
+  },
+  {
+    "dayTitle": "Day 5 (Extended Program)",
+    "time": "Full Day",
+    "location": "Various Locations",
+    "activities": [
+      "Breakfast at hotel",
+      "Speaker sessions with technopreneurs, panel discussions and networking sessions",
+      "Evening free for own activities"
+    ],
+    "imageSrc": "/Itenary-5.webp",
+    "imageAlt": "Students in hands-on workshop",
+    "imagePosition": "right"
+  },
+  {
+    "dayTitle": "Day 6 (Extended Program)",
+    "time": "Full Day",
+    "location": "Universal Studios",
+    "activities": [
+      "Breakfast at hotel",
+      "Proceed to Universal Studios Including Entrance ticket + Meal Voucher",
+      "Evening dinner and back to hotel"
+    ],
+    "imageSrc": "/Itenary-6.webp",
+    "imageAlt": "Students in industry exposure session",
+    "imagePosition": "left"
+  },
+  {
+    "dayTitle": "Day 7 (Extended Program)",
+    "time": "Full Day",
+    "location": "Singapore City",
+    "activities": [
+      "Breakfast at Hotel",
+      "Morning session:",
+      "Half day Singapore City Sightseeing Tour",
+      "Lunch",
+      "Afternoon session:",
+      "Gardens by the Bay Tour",
+      "Evening Dinner and back to hotel"
+    ],
+    "imageSrc": "/Itenary-7.webp",
+    "imageAlt": "Students in industry exposure session",
+    "imagePosition": "right"
+  },
+  {
+    "dayTitle": "Day 8 (Extended Program)",
+    "time": "Full Day",
+    "location": "Company/Industrial Site",
+    "activities": [
+      "Breakfast at hotel",
+      "Company meet / Industrial tour"
+    ],
+    "imageSrc": "/Itenary-8.webp",
+    "imageAlt": "Students in industry exposure session",
+    "imagePosition": "left"
+  },
+  {
+    "dayTitle": "Day 9 (Extended Program)",
+    "time": "Morning - Afternoon",
+    "location": "University Campus / Airport",
+    "activities": [
+      "Breakfast at hotel",
+      "Morning session:",
+      "University admissions session",
+      "Lunch",
+      "Departures to airport"
+    ],
+    "imageSrc": "/detailed-itenary-1.png",
+    "imageAlt": "Students in hands-on workshop",
+    "imagePosition": "right"
+  }
+]

@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 
-interface DayItineraryItem {
+export interface DayItineraryItem {
   dayTitle: string;
   time: string;
   location: string;
@@ -13,138 +13,89 @@ interface DayItineraryItem {
   imagePosition: 'left' | 'right';
 }
 
-const dayItineraryData: DayItineraryItem[] = [
-  {
-    dayTitle: "Day 1: Arrival and Welcome",
-    time: "9am - 6pm",
-    location: "University Campus",
-    activities: [
-     
-      "Airport Pickup and Checkin",
-      "Welcome ceremony and program overview",
-      "Campus tour and facility introduction",
-     "Ice-breaking activities with cohort",
-      "Singapore city orientation walk"
-    ],
-    imageSrc: "/detailed-itenary-1.png",
-    imageAlt: "Students in hands-on workshop",
-    imagePosition: "right"
-  },
-  {
-    dayTitle: "Day 2: Academic Foundation",
-    time: "9am - 6pm",
-    location: "University Campus",
-    activities: [
-     
-      "Airport Pickup and Checkin",
-      "Welcome ceremony and program overview",
-      "Campus tour and facility introduction",
-      "Ice-breaking activities with cohort",
-        "Singapore city orientation walk"
-    ],
-    imageSrc: "/itenary-2.webp",
-    imageAlt: "Students in industry exposure session",
-    imagePosition: "left"
-  },
-  {
-    dayTitle: "Day 3: Hands on Workshop",
-    time: "9am - 6pm",
-    location: "University Campus",
-    activities: [
-     
-      "Airport Pickup and Checkin",
-      "Welcome ceremony and program overview",
-      "Campus tour and facility introduction",
-      "Ice-breaking activities with cohort",
-      "Singapore city orientation walk"
-    ],
-    imageSrc: "/Itenary-3.webp",
-    imageAlt: "Students in hands-on workshop",
-    imagePosition: "right"
-  },
-  {
-    dayTitle: "Day 4: Industry Exposure",
-    time: "9am - 6pm",
-    location: "University Campus",
-    activities: [
-     
-      "Airport Pickup and Checkin",
-      "Welcome ceremony and program overview",
-      "Campus tour and facility introduction",
-      "Ice-breaking activities with cohort",
-      "Singapore city orientation walk"
-    ],
-    imageSrc: "/Itenary-4.webp",
-    imageAlt: "Students in industry exposure session",
-    imagePosition: "left"
-  },
-  {
-    dayTitle: "Day 5: Hands on Workshop",
-    time: "9am - 6pm",
-    location: "University Campus",
-    activities: [
-     
-      "Airport Pickup and Checkin",
-      "Welcome ceremony and program overview",
-      "Campus tour and facility introduction",
-      "Ice-breaking activities with cohort",
-      "Singapore city orientation walk"
-    ],
-    imageSrc: "/Itenary-5.webp",
-    imageAlt: "Students in hands-on workshop",
-    imagePosition: "right"
-  },
-  {
-    dayTitle: "Day 6: Industry Exposure",
-    time: "9am - 6pm",
-    location: "University Campus",
-    activities: [
-     
-      "Airport Pickup and Checkin",
-      "Welcome ceremony and program overview",
-      "Campus tour and facility introduction",
-      "Ice-breaking activities with cohort",
-      "Singapore city orientation walk"
-    ],
-    imageSrc: "/Itenary-6.webp",
-    imageAlt: "Students in industry exposure session",
-    imagePosition: "left"
-  },
-  {
-    dayTitle: "Day 7: Hands on Workshop",
-    time: "9am - 6pm",
-    location: "University Campus",
-    activities: [
-     
-      "Airport Pickup and Checkin",
-      "Welcome ceremony and program overview",
-      "Campus tour and facility introduction",
-      "Ice-breaking activities with cohort",  
-      "Singapore city orientation walk"
-    ],
-    imageSrc: "/Itenary-7.webp",
-    imageAlt: "Students in industry exposure session",
-    imagePosition: "right"
-  },
-  {
-    dayTitle: "Day 8: Industry Exposure",
-    time: "9am - 6pm",
-    location: "University Campus",
-    activities: [
-     
-      "Airport Pickup and Checkin",
-      "Welcome ceremony and program overview",
-      "Campus tour and facility introduction",
-      "Ice-breaking activities with cohort",  
-      "Singapore city orientation walk"
-    ],
-    imageSrc: "/Itenary-8.webp",
-    imageAlt: "Students in industry exposure session",
-    imagePosition: "left"
-  }
-];
+interface DayItineraryProps {
+  data: DayItineraryItem[];
+}
 
-const DayItinerary = () => {
+interface ActivityGroup {
+  type: 'header' | 'item';
+  content: string;
+  items?: string[];
+}
+
+// Function to parse activities into headers and grouped items
+const parseActivities = (activities: string[]): ActivityGroup[] => {
+  const groups: ActivityGroup[] = [];
+  let currentHeader: ActivityGroup | null = null;
+  let regularItems: string[] = [];
+
+  const isHeader = (activity: string): boolean => {
+    const normalized = activity.trim();
+    return (
+      normalized.endsWith(':') ||
+      /Session:\s+/.test(normalized) || // Session: followed by space
+      /session:\s+/.test(normalized) || // session: followed by space
+      normalized.includes('Featured Activities:') ||
+      normalized.includes('Featured Activity:') ||
+      normalized.includes('Key Feature:') ||
+      normalized.includes('Key Features:')
+    );
+  };
+
+  for (const activity of activities) {
+    if (isHeader(activity)) {
+      // Save any pending regular items
+      if (regularItems.length > 0) {
+        regularItems.forEach(item => {
+          groups.push({ type: 'item', content: item });
+        });
+        regularItems = [];
+      }
+
+      // Save previous header if exists
+      if (currentHeader) {
+        groups.push(currentHeader);
+      }
+
+      // Start new header - clean up the header text
+      let headerText = activity.trim();
+      // Remove trailing colon if present
+      if (headerText.endsWith(':')) {
+        headerText = headerText.slice(0, -1).trim();
+      }
+      // For headers with colons in the middle, keep the full text but clean it
+      currentHeader = {
+        type: 'header',
+        content: headerText,
+        items: []
+      };
+    } else {
+      if (currentHeader) {
+        // Add to current header's items
+        currentHeader.items!.push(activity);
+      } else {
+        // Regular item before any header
+        regularItems.push(activity);
+      }
+    }
+  }
+
+  // Save any remaining regular items
+  if (regularItems.length > 0) {
+    regularItems.forEach(item => {
+      groups.push({ type: 'item', content: item });
+    });
+  }
+
+  // Save last header if exists
+  if (currentHeader) {
+    groups.push(currentHeader);
+  }
+
+  return groups;
+};
+
+const DayItinerary = ({ data }: DayItineraryProps) => {
   const [expandedDay, setExpandedDay] = useState<number | null>(null); // Accordion closed by default on mobile
 
   const toggleDay = (index: number) => {
@@ -166,7 +117,7 @@ const DayItinerary = () => {
 
         {/* Itinerary Cards */}
         <div className="space-y-3  sm:space-y-8">
-          {dayItineraryData.map((day, index) => (
+          {data.map((day, index) => (
             <DayCard
               key={index}
               day={day}
@@ -190,6 +141,97 @@ interface DayCardProps {
 
 const DayCard = ({ day, index, isExpanded, onToggle }: DayCardProps) => {
   const imageOnLeft = day.imagePosition === 'left';
+  const [activitiesExpanded, setActivitiesExpanded] = useState(false);
+  const [buttonAnimating, setButtonAnimating] = useState(false);
+  const mobileScrollRef = useRef<HTMLDivElement>(null);
+  const desktopScrollRef = useRef<HTMLDivElement>(null);
+  
+  // Parse activities into groups
+  const activityGroups = parseActivities(day.activities);
+  // Count only actual activity items (not headers)
+  const totalItems = activityGroups.reduce((count, group) => {
+    return count + (group.type === 'header' ? (group.items?.length || 0) : 1);
+  }, 0);
+  const hasMoreThanFive = totalItems > 5;
+  
+  // For expand functionality, show first 5 individual activity items
+  const getVisibleGroups = (expanded: boolean) => {
+    if (expanded || !hasMoreThanFive) return activityGroups;
+    
+    let itemCount = 0;
+    const visible: ActivityGroup[] = [];
+    
+    for (const group of activityGroups) {
+      if (group.type === 'header') {
+        // For headers, count only the items under them
+        const headerItems = group.items || [];
+        const remainingSlots = 5 - itemCount;
+        
+        if (remainingSlots <= 0) break;
+        
+        if (headerItems.length > 0) {
+          // Include header with only the items that fit
+          const visibleItems = headerItems.slice(0, remainingSlots);
+          visible.push({
+            type: 'header',
+            content: group.content,
+            items: visibleItems
+          });
+          itemCount += visibleItems.length;
+        }
+      } else {
+        // Regular item
+        if (itemCount < 5) {
+          visible.push(group);
+          itemCount += 1;
+        } else {
+          break;
+        }
+      }
+      
+      if (itemCount >= 5) break;
+    }
+    
+    return visible;
+  };
+  
+  const visibleGroups = getVisibleGroups(activitiesExpanded);
+  // Count only actual activity items shown
+  const visibleItemCount = visibleGroups.reduce((count, group) => {
+    return count + (group.type === 'header' ? (group.items?.length || 0) : 1);
+  }, 0);
+  const remainingCount = totalItems - visibleItemCount;
+
+  const handleExpandActivities = () => {
+    setButtonAnimating(true);
+    setTimeout(() => {
+      setActivitiesExpanded(true);
+      setButtonAnimating(false);
+    }, 300); // Match animation duration
+  };
+
+  useEffect(() => {
+    if (activitiesExpanded && hasMoreThanFive) {
+      // Small delay to ensure DOM is updated
+      setTimeout(() => {
+        const scrollContainer = mobileScrollRef.current || desktopScrollRef.current;
+        if (scrollContainer) {
+          // Scroll down a bit to indicate scrollability
+          scrollContainer.scrollTo({
+            top: 60,
+            behavior: 'smooth'
+          });
+          // Scroll back up after a moment
+          setTimeout(() => {
+            scrollContainer.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+          }, 800);
+        }
+      }, 100);
+    }
+  }, [activitiesExpanded, hasMoreThanFive]);
   
   return (
     <div className="bg-white rounded-2xl lg:shadow-none  sm:rounded-3xl shadow-lg overflow-hidden ">
@@ -283,24 +325,65 @@ const DayCard = ({ day, index, isExpanded, onToggle }: DayCardProps) => {
           isExpanded ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="px-6 py-4">
+        <div className="px-4 py-4">
 
           <div>
             <h4 className="text-lg font-bold text-navy mb-4">Daily Activities</h4>
-            <ul className="space-y-3">
-              {day.activities.map((activity, idx) => (
-                <li key={idx} className="flex items-start gap-3">
-                  <div className="shrink-0 w-5 h-5  flex items-center justify-center mt-0.5">
-                  <svg className='w-5 h-5' viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="0.833333" y="0.833333" width="18.3333" height="18.3333" rx="9.16667" stroke="#FF6600" strokeWidth="1.66667"/>
-<path d="M14.1666 6.66663L8.43742 12.5L5.83325 9.84844" stroke="#FF6600" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
-</svg>
-
+            <div 
+              ref={mobileScrollRef}
+              className={`${activitiesExpanded && hasMoreThanFive ? "max-h-60 overflow-y-auto scroll-smooth" : ""}`}
+            >
+              <div className="space-y-4">
+                {visibleGroups.map((group, idx) => (
+                  <div key={idx}>
+                    {group.type === 'header' ? (
+                      <div className="space-y-3">
+                        <h5 className="text-lg font-smibold text-[#FF6600] mb-3" >
+                          {group.content}
+                        </h5>
+                        {group.items && group.items.length > 0 && (
+                          <div className="  space-y-2.5">
+                            {group.items.map((item, itemIdx) => (
+                              <div key={itemIdx} className="flex items-start gap-3">
+                                <div className="shrink-0 w-5 h-5 flex items-center justify-center mt-0.5">
+                                  <svg className='w-5 h-5' viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.833333" y="0.833333" width="18.3333" height="18.3333" rx="9.16667" stroke="#FF6600" strokeWidth="1.66667"/>
+                                    <path d="M14.1666 6.66663L8.43742 12.5L5.83325 9.84844" stroke="#FF6600" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
+                                  </svg>
+                                </div>
+                                <span className="text-base text-neutral-700 flex-1">{item}</span>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ) : (
+                      <div className="flex items-start gap-3">
+                        <div className="shrink-0 w-5 h-5 flex items-center justify-center mt-0.5">
+                          <svg className='w-5 h-5' viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.833333" y="0.833333" width="18.3333" height="18.3333" rx="9.16667" stroke="#FF6600" strokeWidth="1.66667"/>
+                            <path d="M14.1666 6.66663L8.43742 12.5L5.83325 9.84844" stroke="#FF6600" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        </div>
+                        <span className="text-base text-neutral-700 flex-1">{group.content}</span>
+                      </div>
+                    )}
                   </div>
-                  <span className="text-base text-neutral-700 flex-1">{activity}</span>
-                </li>
-              ))}
-            </ul>
+                ))}
+              </div>
+              {hasMoreThanFive && !activitiesExpanded && (
+                <button
+                  onClick={handleExpandActivities}
+                  className={`mt-3 text-[#E35F30] font-medium text-sm hover:text-[#FF6600] transition-all duration-300 ease-in-out overflow-hidden ${
+                    buttonAnimating 
+                      ? 'max-h-0 opacity-0 transform translate-y-2 pointer-events-none' 
+                      : 'max-h-20 opacity-100 transform translate-y-0'
+                  }`}
+                >
+                  <span className="block py-2">+{remainingCount} More</span>
+                </button>
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -329,7 +412,7 @@ const DayCard = ({ day, index, isExpanded, onToggle }: DayCardProps) => {
         )}
 
         {/* Content Section */}
-        <div className="p-8 lg:p-0 lg:pl-5 lg:my-0 flex lg:w-2/5 flex-col justify-center bg-white">
+        <div className="p-8 lg:p-0 lg:pl-5 lg:my-0 flex lg:w-2/5 flex-col justify-center gap-y-2 bg-white">
         <div className='py-2'>
 
           <h3 className="text-lg lg:text-xl font-bold text-navy mb-2">
@@ -380,25 +463,62 @@ const DayCard = ({ day, index, isExpanded, onToggle }: DayCardProps) => {
           </div>
           <div>
             <h4 className="text-lg font-bold text-navy mb-2">Daily Activities</h4>
-            <ul className="space-y-3">
-              <li className='text-base lg:text-sm text-black'>Ice-breaking activities with cohort</li>
-              {day.activities.map((activity, idx) => (
-                
-                <li key={idx} className="flex items-start justify-start gap-3">
-                  
-                  <div className="shrink-0 w-5 h-5 rounded-full  flex items-start justify-start mt-0.5">
-                    
-                  <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="0.833333" y="0.833333" width="22.3333" height="22.3333" rx="11.1667" stroke="#E35F30" strokeWidth="1.66667"/>
-<path d="M17 8L10.125 15L7 11.8182" stroke="#E35F30" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
-</svg>
-
+            <div 
+              ref={desktopScrollRef}
+              className={`${activitiesExpanded && hasMoreThanFive ? "max-h-60 overflow-y-auto scroll-smooth" : ""} pr-2`}
+            >
+              <div className="space-y-4">
+                {visibleGroups.map((group, idx) => (
+                  <div key={idx}>
+                    {group.type === 'header' ? (
+                      <div className="space-y-3">
+                        <h5 className="text-2xl sm:text-sm font-bold text-[#FF6600] mb-3" >
+                          {group.content}
+                        </h5>
+                        {group.items && group.items.length > 0 && (
+                          <div className="
+                           space-y-2.5">
+                            {group.items.map((item, itemIdx) => (
+                              <div key={itemIdx} className="flex items-start gap-3">
+                                <div className="shrink-0 w-5 h-5 flex items-start justify-start mt-0.5">
+                                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.833333" y="0.833333" width="22.3333" height="22.3333" rx="11.1667" stroke="#E35F30" strokeWidth="1.66667"/>
+                                    <path d="M17 8L10.125 15L7 11.8182" stroke="#E35F30" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
+                                  </svg>
+                                </div>
+                                <span className="text-base lg:text-sm text-neutral-700 flex-1">{item}</span>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ) : (
+                      <div className="flex items-start justify-start gap-3">
+                        <div className="shrink-0 w-5 h-5 rounded-full flex items-start justify-start mt-0.5">
+                          <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.833333" y="0.833333" width="22.3333" height="22.3333" rx="11.1667" stroke="#E35F30" strokeWidth="1.66667"/>
+                            <path d="M17 8L10.125 15L7 11.8182" stroke="#E35F30" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        </div>
+                        <span className="text-base lg:text-sm text-neutral-700 flex-1">{group.content}</span>
+                      </div>
+                    )}
                   </div>
-                  <span className="text-base lg:text-sm text-neutral-700 flex-1">{activity}</span>
-                </li>
-                
-              ))}
-            </ul>
+                ))}
+              </div>
+              {hasMoreThanFive && !activitiesExpanded && (
+                <button
+                  onClick={handleExpandActivities}
+                  className={`mt-3 text-[#E35F30] w-full text-center text-sm py-2 px-4 cursor-pointer font-semibold hover:text-[#FF6600] transition-all duration-300 ease-in-out overflow-hidden ${
+                    buttonAnimating 
+                      ? 'max-h-0 opacity-0 transform translate-y-2 pointer-events-none' 
+                      : 'max-h-20 opacity-100 transform translate-y-0'
+                  }`}
+                >
+                  <span className="block">+{remainingCount} More</span>
+                </button>
+              )}
+            </div>
           </div>
         </div>
 

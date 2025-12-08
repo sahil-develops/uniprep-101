@@ -173,7 +173,7 @@ const ProgramCard = ({ data,program }: ProgramCardProps) => {
 
 
         {/* Call to Action Buttons */}
-        <div className={`${data.price === "USD 7,000" ? 'pt-6 sm:mt-[67px] lg:mt-12' : 'pt-6'} mb-6 flex flex-col  items-center justify-between gap-4`}>
+        <div className={`${data.price === "US$ 4,000" ? 'pt-6 sm:mt-[67px] lg:mt-12' : 'pt-6'} mb-6 flex flex-col  items-center justify-between gap-4`}>
           <Link href="/register">
           <button className="w-full cursor-pointer sm:w-auto text-lg sm:text-xl bg-primary hover:opacity-90 text-white font-medium px-12 py-2 rounded-lg flex items-center justify-center gap-2 transition-opacity duration-200 mb-0">
             Register Interest

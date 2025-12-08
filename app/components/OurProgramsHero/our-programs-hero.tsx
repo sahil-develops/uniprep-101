@@ -24,7 +24,7 @@ export default function OurProgramsHero() {
         "Tech Company Visits",
         "Industry Mentorship Sessions"
       ],
-      price: "USD 5,000",
+      price: "US$ 4,500",
       redirectUrl: "/stem-prep"
     },
     {
@@ -47,7 +47,7 @@ export default function OurProgramsHero() {
         "Start-Up Entrepreneurship Sessions",
 
       ],
-      price: "USD 7,000",
+      price: "US$ 4,000",
       redirectUrl: "/business-prep"
     }
   ];

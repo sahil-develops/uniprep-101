@@ -24,10 +24,10 @@ export default function StemPrepHero({ title = 'StemPrep101' }: { title?: string
           {/* Date Buttons */}
           <div className="mb-6 sm:mb-8 flex flex-wrap gap-3">
             <button className="backdrop-blur-sm px-4 py-2 sm:px-8 sm:py-2 rounded-full text-white text-sm sm:text-lg font-medium bg-white/20 border-l-[0.5px] border-t-[0.5px] border-b  border-white/70" style={{boxShadow: '0 2px 8px 0 rgba(0,0,0,0.08)'}}>
-              8-17 July, 2026
+              15-23 June, 2026
             </button>
             <button className="backdrop-blur-sm px-4 py-2 sm:px-8 sm:py-2 rounded-full text-white text-sm sm:text-lg font-medium bg-white/20 border-l-[0.5px] border-t-[0.5px] border-b  border-white/70" style={{boxShadow: '0 2px 8px 0 rgba(0,0,0,0.08)'}}>
-              12-20 Oct, 2026
+              06-14 July, 2026
             </button>
           
           </div>

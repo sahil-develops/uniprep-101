@@ -38,7 +38,7 @@ export default function StemPrepHero({ title = 'StemPrep101' }: { title?: string
           </h1>
 
           {/* Subtitle */}
-          <p className="mb-4 text-lg sm:text-xl md:text-2xl font-medium text-bold">
+          <p className="mb-4 text-lg sm:text-xl md:text-2xl font-medium text-bold text-white">
             Science, Technology, Engineering & Mathematics
           </p>
 

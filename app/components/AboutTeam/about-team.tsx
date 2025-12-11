@@ -138,7 +138,7 @@ function TeamMemberCard({ member }: { member: TeamMember }) {
             alt={member.name}
             width={144}
             height={144}
-            className="w-full h-full   border-white bg-[#E6EEF9] shadow-lg sm:h-32 sm:w-32 object-fit"
+            className="w-full h-full aspect-auto   border-white bg-[#E6EEF9] shadow-lg sm:h-32 sm:w-32 object-fit"
           />
         ) : (
           <span className="text-2xl font-bold text-[#0A1431]">{getInitials(member.name)}</span>

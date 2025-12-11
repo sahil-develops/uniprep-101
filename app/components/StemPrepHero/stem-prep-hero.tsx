@@ -23,10 +23,10 @@ export default function StemPrepHero({ title = 'StemPrep101' }: { title?: string
         <div className="max-w-full w-full">
           {/* Date Buttons */}
           <div className="mb-6 sm:mb-8 flex flex-wrap gap-3">
-            <button className="backdrop-blur-sm px-4 py-2 sm:px-8 sm:py-2 rounded-full text-white text-sm sm:text-lg font-medium bg-white/20 border-l-[0.5px] border-t-[0.5px] border-b  border-white/70" style={{boxShadow: '0 2px 8px 0 rgba(0,0,0,0.08)'}}>
+            <button className="backdrop-blur-sm px-4 py-2 sm:px-8 sm:py-2 rounded-full text-white text-sm sm:text-lg font-medium bg-primary" style={{boxShadow: '0 2px 8px 0 rgba(0,0,0,0.08)'}}>
               15-23 June, 2026
             </button>
-            <button className="backdrop-blur-sm px-4 py-2 sm:px-8 sm:py-2 rounded-full text-white text-sm sm:text-lg font-medium bg-white/20 border-l-[0.5px] border-t-[0.5px] border-b  border-white/70" style={{boxShadow: '0 2px 8px 0 rgba(0,0,0,0.08)'}}>
+            <button className="bg-primary px-4 py-2 sm:px-8 sm:py-2 rounded-full text-white text-sm sm:text-lg font-medium " style={{boxShadow: '0 2px 8px 0 rgba(0,0,0,0.08)'}}>
               06-14 July, 2026
             </button>
           

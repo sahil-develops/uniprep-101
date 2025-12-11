@@ -3,15 +3,21 @@
     "dayTitle": "Day 1",
     "time": "9am - 5pm",
     "location": "University Campus",
+    "morningSessionHeading": "Morning session:",
+    "afternoonSessionHeading": "Afternoon session:",
+    "locationLabel": "",
+    "itemsWithoutCheckmark": [
+      "Bento Box lunch on campus",
+      "Evening dinner and return to hotel"
+    ],
     "activities": [
       "Breakfast at hotel",
       "Proceed to SMU campus",
       "Morning session:",
-      "Types of Analytics in the Digital Economy",
-      "Bento Box lunch on campus",
+"Types of Analytics in the Digital Economy",
       "Afternoon session:",
-      "Analysis of quantitative data using Excel Data Analysis Toolpak and PSPP (open source software)",
-      "Evening dinner and return to hotel"
+      "Analysis of quantitative data using Excel Data Analysis Toolpak and PSPP (open source software)"
+      
     ],
     "imageSrc": "/detailed-itenary-1.png",
     "imageAlt": "Students in hands-on workshop",
@@ -21,15 +27,20 @@
     "dayTitle": "Day 2",
     "time": "9am - 5pm",
     "location": "University Campus",
+    "morningSessionHeading": "Morning session",
+    "afternoonSessionHeading": "Afternoon session",
+    "locationLabel": "",
+    "itemsWithoutCheckmark": [
+      "Bento box lunch on campus",
+      "Evening dinner and return to hotel"
+    ],
     "activities": [
       "Breakfast at hotel",
       "Proceed to SMU campus",
       "Morning session:",
       "Qualitative data codification using Taguette (open source software)",
-      "Bento box lunch on campus",
       "Afternoon session:",
-      "Integrating qualitative and quantitative analysis techniques. Assessment",
-      "Evening dinner and return to hotel"
+      "Integrating qualitative and quantitative analysis techniques. Assessment"
     ],
     "imageSrc": "/itenary-2.webp",
     "imageAlt": "Students in industry exposure session",
@@ -39,15 +50,20 @@
     "dayTitle": "Day 3",
     "time": "9am - 5pm",
     "location": "University Campus",
+    "morningSessionHeading": "Morning session",
+    "afternoonSessionHeading": "Afternoon session",
+    "locationLabel": "",
+    "itemsWithoutCheckmark": [
+      "Bento box lunch on campus",
+      "Evening dinner and return to hotel"
+    ],
     "activities": [
       "Breakfast at hotel",
       "Proceed to SMU campus",
       "Morning session:",
       "Design thinking using a real world case study by conducting primary research sessions with business owners",
-      "Bento box lunch on campus",
       "Afternoon session:",
-      "Insight collation. Constructing empathy maps and user journeys",
-      "Evening dinner and return to hotel"
+      "Insight collation. Constructing empathy maps and user journeys"
     ],
     "imageSrc": "/Itenary-3.webp",
     "imageAlt": "Students in hands-on workshop",
@@ -57,16 +73,21 @@
     "dayTitle": "Day 4",
     "time": "9am - 5pm",
     "location": "University Campus",
+    "morningSessionHeading": "Morning session",
+    "afternoonSessionHeading": "Afternoon session",
+    "locationLabel": "",
+    "itemsWithoutCheckmark": [
+      "Bento box lunch on campus",
+      "Evening dinner and return to hotel"
+    ],
     "activities": [
       "Breakfast at hotel",
       "Proceed to SMU campus",
       "Morning session:",
       "Ideation and prototyping",
-      "Bento box lunch on campus",
       "Afternoon session:",
       "Group project",
-      "Assessment",
-      "Evening dinner and return to hotel"
+      "Assessment"
     ],
     "imageSrc": "/Itenary-4.webp",
     "imageAlt": "Students in industry exposure session",
@@ -76,6 +97,8 @@
     "dayTitle": "Day 5 (Extended Program)",
     "time": "Full Day",
     "location": "Various Locations",
+    "locationLabel": "",
+    "itemsWithoutCheckmark": [],
     "activities": [
       "Breakfast at hotel",
       "Speaker sessions with technopreneurs, panel discussions and networking sessions",
@@ -89,10 +112,12 @@
     "dayTitle": "Day 6 (Extended Program)",
     "time": "Full Day",
     "location": "Universal Studios",
+    "locationLabel": "",
+    "itemsWithoutCheckmark": ["Evening Dinner and back to hotel"],
     "activities": [
       "Breakfast at hotel",
-      "Proceed to Universal Studios Including Entrance ticket + Meal Voucher",
-      "Evening dinner and back to hotel"
+      "Proceed to Universal Studios Including Entrance ticket + Meal Voucher"
+    
     ],
     "imageSrc": "/Itenary-6.webp",
     "imageAlt": "Students in industry exposure session",
@@ -102,14 +127,18 @@
     "dayTitle": "Day 7 (Extended Program)",
     "time": "Full Day",
     "location": "Singapore City",
+    "morningSessionHeading": "Morning session",
+    "afternoonSessionHeading": "Afternoon session",
+    "locationLabel": "",
+    "itemsWithoutCheckmark": ["Lunch","Evening Dinner and back to hotel"],
     "activities": [
       "Breakfast at Hotel",
       "Morning session:",
       "Half day Singapore City Sightseeing Tour",
-      "Lunch",
+    
       "Afternoon session:",
-      "Gardens by the Bay Tour",
-      "Evening Dinner and back to hotel"
+      "Gardens by the Bay Tour"
+      
     ],
     "imageSrc": "/Itenary-7.webp",
     "imageAlt": "Students in industry exposure session",
@@ -119,6 +148,8 @@
     "dayTitle": "Day 8 (Extended Program)",
     "time": "Full Day",
     "location": "Company/Industrial Site",
+    "locationLabel": "",
+    "itemsWithoutCheckmark": [],
     "activities": [
       "Breakfast at hotel",
       "Company meet / Industrial tour"
@@ -131,12 +162,14 @@
     "dayTitle": "Day 9 (Extended Program)",
     "time": "Morning - Afternoon",
     "location": "University Campus / Airport",
+    "morningSessionHeading": "Morning session",
+    "locationLabel": "",
+    "itemsWithoutCheckmark": ["Lunch","Departures to airport"],
     "activities": [
       "Breakfast at hotel",
       "Morning session:",
-      "University admissions session",
-      "Lunch",
-      "Departures to airport"
+      "University admissions session"
+     
     ],
     "imageSrc": "/detailed-itenary-1.png",
     "imageAlt": "Students in hands-on workshop",

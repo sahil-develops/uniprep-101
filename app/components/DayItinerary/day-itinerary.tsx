@@ -11,6 +11,17 @@ export interface DayItineraryItem {
   imageSrc: string;
   imageAlt: string;
   imagePosition: 'left' | 'right';
+  // Optional customizable headings
+  fullDaySessionHeading?: string;
+  featuredActivitiesHeading?: string;
+  morningSessionHeading?: string;
+  afternoonSessionHeading?: string;
+  featuredActivityHeading?: string;
+  keyFeatureHeading?: string;
+  keyFeaturesHeading?: string;
+  locationLabel?: string;
+  // Optional items displayed without checkmarks at the end
+  itemsWithoutCheckmark?: string[];
 }
 
 interface DayItineraryProps {
@@ -23,8 +34,67 @@ interface ActivityGroup {
   items?: string[];
 }
 
+// Function to map detected heading to custom heading if available
+const mapHeadingToCustom = (detectedHeading: string, day: DayItineraryItem): string => {
+  const normalized = detectedHeading.toLowerCase().trim();
+  
+  // Check for custom headings and map them
+  if (day.fullDaySessionHeading && (
+    normalized.includes('full-day session') || 
+    normalized.includes('full day session') ||
+    normalized === 'full-day session' ||
+    normalized === 'full day session'
+  )) {
+    return day.fullDaySessionHeading;
+  }
+  
+  if (day.morningSessionHeading && (
+    normalized.includes('morning session') ||
+    normalized === 'morning session'
+  )) {
+    return day.morningSessionHeading;
+  }
+  
+  if (day.afternoonSessionHeading && (
+    normalized.includes('afternoon session') ||
+    normalized === 'afternoon session'
+  )) {
+    return day.afternoonSessionHeading;
+  }
+  
+  if (day.featuredActivitiesHeading && (
+    normalized.includes('featured activities') ||
+    normalized === 'featured activities'
+  )) {
+    return day.featuredActivitiesHeading;
+  }
+  
+  if (day.featuredActivityHeading && (
+    normalized.includes('featured activity') ||
+    normalized === 'featured activity'
+  )) {
+    return day.featuredActivityHeading;
+  }
+  
+  if (day.keyFeaturesHeading && (
+    normalized.includes('key features') ||
+    normalized === 'key features'
+  )) {
+    return day.keyFeaturesHeading;
+  }
+  
+  if (day.keyFeatureHeading && (
+    normalized.includes('key feature') ||
+    normalized === 'key feature'
+  )) {
+    return day.keyFeatureHeading;
+  }
+  
+  return detectedHeading;
+};
+
 // Function to parse activities into headers and grouped items
-const parseActivities = (activities: string[]): ActivityGroup[] => {
+const parseActivities = (activities: string[], day: DayItineraryItem): ActivityGroup[] => {
   const groups: ActivityGroup[] = [];
   let currentHeader: ActivityGroup | null = null;
   let regularItems: string[] = [];
@@ -64,6 +134,8 @@ const parseActivities = (activities: string[]): ActivityGroup[] => {
         headerText = headerText.slice(0, -1).trim();
       }
       // For headers with colons in the middle, keep the full text but clean it
+      // Map to custom heading if available
+      headerText = mapHeadingToCustom(headerText, day);
       currentHeader = {
         type: 'header',
         content: headerText,
@@ -147,12 +219,12 @@ const DayCard = ({ day, index, isExpanded, onToggle }: DayCardProps) => {
   const desktopScrollRef = useRef<HTMLDivElement>(null);
   
   // Parse activities into groups
-  const activityGroups = parseActivities(day.activities);
+  const activityGroups = parseActivities(day.activities, day);
   // Count only actual activity items (not headers)
   const totalItems = activityGroups.reduce((count, group) => {
     return count + (group.type === 'header' ? (group.items?.length || 0) : 1);
   }, 0);
-  const hasMoreThanFive = totalItems > 5;
+  const hasMoreThanFive = totalItems > 3;
   
   // For expand functionality, show first 5 individual activity items
   const getVisibleGroups = (expanded: boolean) => {
@@ -165,7 +237,7 @@ const DayCard = ({ day, index, isExpanded, onToggle }: DayCardProps) => {
       if (group.type === 'header') {
         // For headers, count only the items under them
         const headerItems = group.items || [];
-        const remainingSlots = 5 - itemCount;
+        const remainingSlots = 3 - itemCount;
         
         if (remainingSlots <= 0) break;
         
@@ -181,7 +253,7 @@ const DayCard = ({ day, index, isExpanded, onToggle }: DayCardProps) => {
         }
       } else {
         // Regular item
-        if (itemCount < 5) {
+        if (itemCount < 3) {
           visible.push(group);
           itemCount += 1;
         } else {
@@ -189,7 +261,7 @@ const DayCard = ({ day, index, isExpanded, onToggle }: DayCardProps) => {
         }
       }
       
-      if (itemCount >= 5) break;
+      if (itemCount >= 3) break;
     }
     
     return visible;
@@ -293,7 +365,7 @@ const DayCard = ({ day, index, isExpanded, onToggle }: DayCardProps) => {
                   d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                 />
               </svg>
-              <span className="truncate">{day.location}</span>
+              <span className="truncate">{day.locationLabel ? `${day.locationLabel} ${day.location}` : day.location}</span>
             </div>
           </div>
         </div>
@@ -370,6 +442,16 @@ const DayCard = ({ day, index, isExpanded, onToggle }: DayCardProps) => {
                     )}
                   </div>
                 ))}
+                {/* Items without checkmarks at the end */}
+                {day.itemsWithoutCheckmark && day.itemsWithoutCheckmark.length > 0 && (!hasMoreThanFive || activitiesExpanded) && (
+                  <div className="space-y-2.5 mt-4">
+                    {day.itemsWithoutCheckmark.map((item, itemIdx) => (
+                      <div key={`plain-${itemIdx}`} className="flex items-start gap-3">
+                        <span className="text-base text-neutral-700 flex-1">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
               {hasMoreThanFive && !activitiesExpanded && (
                 <button
@@ -456,7 +538,7 @@ const DayCard = ({ day, index, isExpanded, onToggle }: DayCardProps) => {
                   d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                   />
               </svg>
-              <span className='text-lg'>{day.location}</span>
+              <span className='text-lg'>{day.locationLabel ? `${day.locationLabel} ${day.location}` : day.location}</span>
             </div>
   
           </div>
@@ -501,10 +583,22 @@ const DayCard = ({ day, index, isExpanded, onToggle }: DayCardProps) => {
                           </svg>
                         </div>
                         <span className="text-base lg:text-sm text-neutral-700 flex-1">{group.content}</span>
+                        
                       </div>
                     )}
+                    
                   </div>
                 ))}
+                {/* Items without checkmarks at the end */}
+                    {day.itemsWithoutCheckmark && day.itemsWithoutCheckmark.length > 0 && (!hasMoreThanFive || activitiesExpanded) && (
+                      <div className="space-y-2.5 mt-4">
+                        {day.itemsWithoutCheckmark.map((item, itemIdx) => (
+                          <div key={`plain-${itemIdx}`} className="flex items-start gap-3">
+                            <span className="text-base lg:text-sm text-neutral-700 flex-1">{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
               </div>
               {hasMoreThanFive && !activitiesExpanded && (
                 <button

@@ -65,58 +65,59 @@ export default function Navbar({ color = 'white' }: { color?: 'white' | 'black',
             </div>
 
             {/* Right Navigation */}
-            <div className="flex items-center gap-6">
+            <div className="hidden lg:flex items-center gap-6">
               <Link
                 href="/faq"
-                className={`hidden text-sm font-medium ${color === 'white' ? 'text-white hover:text-primary group-hover:text-white' : 'text-navy hover:text-primary group-hover:text-white'} transition-colors hover:text-primary md:block`}
+                className={`text-sm font-medium ${color === 'white' ? 'text-white hover:text-primary group-hover:text-white' : 'text-navy hover:text-primary group-hover:text-white'} transition-colors hover:text-primary`}
               >
                 FAQ
               </Link>
               <Link
                     href="/testimonials"
                   onClick={closeMobileMenu}
-                  className={`hidden text-sm font-medium ${color === 'white' ? 'text-white hover:text-primary group-hover:text-white'  : 'text-navy hover:text-primary group-hover:text-white'} transition-colors hover:text-primary md:block tracking-wide`}
+                  className={`text-sm font-medium ${color === 'white' ? 'text-white hover:text-primary group-hover:text-white'  : 'text-navy hover:text-primary group-hover:text-white'} transition-colors hover:text-primary tracking-wide`}
                 >
                   Testimonials
                 </Link>
               <Link
                 href="/register"
-                className="hidden rounded-lg bg-primary px-6 py-2 text-sm font-semibold uppercase text-white transition-colors hover:bg-primary/90 md:block"
+                className="rounded-lg bg-primary px-6 py-2 text-sm font-semibold uppercase text-white transition-colors hover:bg-primary/90"
               >
                 Sign Up
               </Link>
-
-              <div className="absolute inset-0 z-0 bg-linear-to-b from-black/60 via-black/30 to-transparent md:hidden"></div>
-              {/* Mobile Menu Button (Hamburger) */}
-              <button
-                onClick={toggleMobileMenu}
-                className="flex flex-col gap-1.5 p-2 z-50 md:hidden"
-                aria-label="Toggle mobile menu"
-              >
-                <span className={`h-0.5 w-6 ${color === 'white' ? 'bg-white' : 'bg-navy'} transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-                <span className={`h-0.5 w-6 ${color === 'white' ? 'bg-white' : 'bg-navy'} transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
-                <span className={`h-0.5 w-6 ${color === 'white' ? 'bg-white' : 'bg-navy'} transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
-              </button>
             </div>
+
+            {/* Mobile Menu Button (Hamburger) */}
+            <button
+              onClick={toggleMobileMenu}
+              className="flex flex-col gap-1.5 p-2 z-50 lg:hidden"
+              aria-label="Toggle mobile menu"
+            >
+              <span className={`h-0.5 w-6 ${color === 'white' ? 'bg-white' : 'bg-navy'} transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+              <span className={`h-0.5 w-6 ${color === 'white' ? 'bg-white' : 'bg-navy'} transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
+              <span className={`h-0.5 w-6 ${color === 'white' ? 'bg-white' : 'bg-navy'} transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+            </button>
           </div>
         </div>
       </nav>
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 z-60 md:hidden transition-transform duration-300 ease-in-out ${
+        className={`fixed inset-0 z-[60] lg:hidden transition-opacity duration-300 ease-in-out ${
           isMobileMenuOpen
-            ? 'translate-x-0 pointer-events-auto'
-            : 'translate-x-full pointer-events-none'
+            ? 'opacity-100 pointer-events-auto'
+            : 'opacity-0 pointer-events-none'
         }`}
         onClick={closeMobileMenu}
       >
         {/* Background Overlay with Black Gradient */}
-      
+        <div className="absolute inset-0 bg-black/50"></div>
  
         {/* Slide-in Menu */}
         <div
-          className="absolute right-0 top-0 z-10 h-full w-[70%] bg-primary shadow-2xl"
+          className={`absolute right-0 top-0 z-10 h-full w-[70%] bg-primary shadow-2xl transition-transform duration-300 ease-in-out ${
+            isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}
           onClick={(e) => e.stopPropagation()}
         >
           <div className="flex h-full flex-col">

@@ -131,14 +131,14 @@ function TeamMemberCard({ member }: { member: TeamMember }) {
       aria-expanded={hasDetailedBio ? isExpanded : undefined}
       className="mx-auto flex w-full max-w-3xl flex-col items-center gap-6 rounded-3xl bg-white/95 px-6 py-10 text-center text-[#0A1431] shadow-[0_24px_40px_-24px_rgba(0,0,0,0.4)] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_32px_48px_-24px_rgba(0,0,0,0.45)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#FF5A1F]/30 sm:px-10 lg:w-1/2"
     >
-      <div className="flex items-center justify-center overflow-hidden rounded-full border-4 border-white bg-[#E6EEF9] shadow-lg sm:h-32 sm:w-32">
+      <div className="flex items-center justify-center overflow-hidden rounded-full">
         {member.imageSrc ? (
           <Image
             src={member.imageSrc}
             alt={member.name}
             width={144}
             height={144}
-            className="h-full w-full object-fill"
+            className="w-full h-full   border-white bg-[#E6EEF9] shadow-lg sm:h-32 sm:w-32 object-fit"
           />
         ) : (
           <span className="text-2xl font-bold text-[#0A1431]">{getInitials(member.name)}</span>

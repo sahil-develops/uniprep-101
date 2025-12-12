@@ -63,22 +63,22 @@ const Testimonials = ({ withBackground = false }: TestimonialsProps) => {
         </div>
       )}
 
-      <section className={`relative ${withBackground ? "bg-transparent " : "bg-white"}  py-5 sm:py-12 lg:py-12 px-4 sm:px-6 lg:px-12`}>
+      <section className={`relative ${withBackground ? "bg-transparent " : "bg-white"}  py-6 sm:py-12 lg:py-12 px-4 sm:px-6 lg:px-12`}>
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-[28px] lg:text-[32px] sm:text-4xl md:text-5xl font-bold text-neutral-900 mb-8 sm:mb-12">
+          <h1 className="text-[28px] lg:text-[32px] sm:text-4xl md:text-5xl font-bold text-neutral-900 mb-3 sm:mb-12">
             {!withBackground && (
               <>Student{" "}</>
               )}
             <span className="relative inline-block font-bold">
                 <span className="relative z-10">Testimonials {" "}</span>
                 {!withBackground && (
-                  <span className="absolute  left-0 right-0 h-5 z-0 bg-[#FDEC04] -bottom-1 "></span>
+                  <span className="absolute  left-0 right-0 lg:h-5 h-3 z-0 bg-[#FDEC04] lg:-bottom-1 bottom-1 "></span>
                 )}
               </span>
             </h1>
 
           {/* Testimonials Cards */}
-          <div className="space-y-6 sm:space-y-4">
+          <div className="space-y-4">
             {testimonials.map((testimonial, index) => (
               <TestimonialCard
                 key={index}
@@ -116,9 +116,9 @@ const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
     testimonial.bootcampColor === "orange" ? "#FF6600" : "#0000FF";
 
   return (
-    <div className="bg-white rounded-[20px] border border-[#D9D9D9] shadow-lg p-4 sm:p-5">
+    <div className="bg-white rounded-[20px]  testimonials-card py-5 px-4">
       {/* Testimonial Text */}
-      <p className="text-base sm:text-lg text-neutral-800 mb-6 leading-relaxed">
+      <p className="text-base sm:text-lg text-neutral-800 lg:mb-6 mb-5 leading-5 lg:leading-relaxed">
         {testimonial.text}
       </p>
 

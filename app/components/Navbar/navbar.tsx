@@ -59,7 +59,7 @@ export default function Navbar({ color = 'white' }: { color?: 'white' | 'black',
               
               <Link href="/">
               <div className="flex items-center">
-                <Image src="/logo.svg" alt="Logo" className='' width={200} height={120} />
+                <Image src="/logo.svg" alt="Logo" className='' width={160} height={120} />
               </div>
               </Link>
             </div>

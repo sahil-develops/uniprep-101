@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 
 const Programs = () => {
   return (
-    <section className="relative bg-[#F7F3E3] py-4 sm:py-16 lg:py-10 px-4 sm:px-6 lg:px-8">
+    <section className="relative bg-[#F7F3E3] py-6 sm:py-16 lg:py-10 px-4 sm:px-6 lg:px-8">
       {/* Background with wavy pattern */}
       {/* <div className="absolute inset-0 z-0">
         <Image
@@ -21,12 +21,12 @@ const Programs = () => {
       
       <div className="relative max-w-7xl mx-auto">
         {/* Section Title */}
-        <h2 className="text-balance text-[28px] font-bold text-black mb-6 sm:text-4xl lg:text-[32px]">
+        <h2 className="text-balance text-[28px] font-bold text-black mb-3 sm:text-4xl lg:text-[32px]">
           Our Programs
         </h2>
 
         {/* Program Cards Container */}
-        <div className="grid md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10">
+        <div className="grid md:grid-cols-2 gap-4 sm:gap-8 lg:gap-10">
           {/* Stem Prep Card */}
           <ProgramCard
             title="StemPrep101"
@@ -89,36 +89,37 @@ const ProgramCard = ({
   const router = useRouter();
   return (
     <div
-      className={`bg-white rounded-2xl shadow-lg overflow-hidden ${
+      className={`bg-white rounded-xl shadow-lg overflow-hidden ${
         hasBorder ? '' : ''
       }`}
       onClick={() => router.push(redirectUrl)}
     >
       {/* Image Section */}
-      <div className="relative h-64 sm:h-80 overflow-hidden">
+      <div className="relative h-[162px] sm:h-80 overflow-hidden">
         <Image
           src={imageSrc}
           alt={title}
           fill
-          className="object-cover"
-          sizes="(max-width: 768px) 100vw, 50vw"
+          className="object-fill"
+          sizes="(max-width: 768px) 100vw, 40vw"
         />
       </div>
 
       {/* Content Section */}
-      <div className="p-3 sm:p-4">
+      <div className="p-3 lg:gap-0 gap-3 flex flex-col  sm:p-4">
         {/* Title */}
-        <h3 className="text-2xl sm:text-3xl font-bold text-neutral-900 mb-0"> 
+        <div className="flex flex-col lg:gap-0 gap-1">
+        <h3 className="text-xl sm:text-3xl font-bold text-neutral-900 mb-0"> 
           {title}
         </h3>
 
         {/* Description */}
-        <p className="text-base  sm:text-base text-neutral-700 mb-1 lg:mb-4 leading-5 relative bg-white  py-2 lg:leading-relaxed">
+        <p className="text-base text-neutral-700 mb-0 lg:mb-4 leading-5 relative bg-white   lg:leading-relaxed">
           {description}
         </p>
-
+        </div>
         {/* Program Details Grid */}
-        <div className="grid grid-cols-2 gap-0 lg:gap-y-0 gap-y-3 sm:gap-6">
+        <div className="grid grid-cols-2 gap-0 lg:gap-y-6 gap-y-3  lg:gap-x-6 gap-x-2">
           {/* University */}
           <div className="flex items-start gap-1 lg:gap-3">
             <div className="relative w-6 h-6 sm:w-7 sm:h-7 shrink-0 mt-1">
@@ -126,7 +127,7 @@ const ProgramCard = ({
                 src={universityIcon}
                 alt="University"
                 fill
-                className="object-contain"
+                className="object-cover"
                 sizes="28px"
               />
             </div>

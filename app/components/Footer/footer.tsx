@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0A2342] text-white py-5 sm:py-10 lg:py-4 px-4 sm:px-6 lg:px-8">
+    <footer className="bg-[#0A2342] text-white py-2 sm:py-10 lg:py-4 px-5 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Logo and Tagline */}
         <div className="text-center mb-5 sm:mb-12 lg:mb-8">
@@ -16,27 +16,27 @@ const Footer = () => {
               alt="UNIPREP101 Logo"
               width={300}
               height={57}
-              className="h-auto lg:w-72 w-44 "
+              className="h-auto lg:w-72 w-36 "
               />
               </Link>
           </div>
-          <p className="text-lg sm:text-base text-white max-w-2xl mx-auto">
+          <p className="text-base text-white font-normal max-w-2xl mx-auto">
             Preparing students for global opportunities through Singapore education
           </p>
         </div>
 
         {/* Links and Contact Section */}
-        <div className="flex flex-row items-start justify-center gap-12 sm:gap-40 mb-7 sm:mb-8 lg:mb-4">
+        <div className="flex flex-row items-start justify-center gap-12 sm:gap-40 mb-0 sm:mb-8 lg:mb-4">
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg sm:text-lg font-bold text-white mb-2 sm:mb-2">
+            <h3 className="text-base sm:text-lg font-bold text-white mb-0 sm:mb-2">
               Quick Links
             </h3>
             <ul className="space-y-0 sm:space-y-0">
               <li>
                 <Link
                   href="/"
-                  className="text-lg sm:text-sm text-white hover:text-primary transition-colors"
+                  className="text-base sm:text-sm text-white hover:text-primary transition-colors"
                 >
                   Home
                 </Link>
@@ -44,7 +44,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/our-programs"
-                  className="text-lg sm:text-sm text-white hover:text-primary transition-colors"
+                  className="text-base sm:text-sm text-white hover:text-primary transition-colors"
                 >
                   Programs
                 </Link>
@@ -52,7 +52,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/about-us"
-                  className="text-lg sm:text-sm text-white hover:text-primary transition-colors"
+                  className="text-base sm:text-sm text-white hover:text-primary transition-colors"
                 >
                   About Us
                 </Link>
@@ -60,7 +60,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/testimonials"
-                  className="text-lg sm:text-sm text-white hover:text-primary transition-colors"
+                  className="text-base sm:text-sm text-white hover:text-primary transition-colors"
                 >
                   Testimonials
                 </Link>
@@ -68,7 +68,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/faq"
-                  className="text-lg sm:text-sm text-white hover:text-primary transition-colors"
+                  className="text-base sm:text-sm text-white hover:text-primary transition-colors"
                 >
                   FAQ
                 </Link>
@@ -76,7 +76,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/register"
-                  className="text-lg sm:text-sm text-white hover:text-primary transition-colors"
+                  className="text-base sm:text-sm text-white hover:text-primary transition-colors"
                 >
                   Inquire
                 </Link>
@@ -85,12 +85,12 @@ const Footer = () => {
           </div>
 
           {/* Contact */}
-          <div className="flex flex-col gap-2 justify-between h-full gap-y-5 lg:gap-y-20">
+          <div className="flex flex-col gap-2 justify-between h-full gap-y-0 lg:gap-y-20">
             <div className="space-y-0  mb-3 sm:mb-4">
-              <h3 className="text-lg sm:text-lg font-bold text-white mb-3 sm:mb-2">
+              <h3 className="text-base sm:text-lg font-bold text-white mb-0 sm:mb-2">
                 Contact
             </h3>
-              <p className="text-lg sm:text-base text-white">
+              <p className="text-base sm:text-base text-white">
                 <a
                   href="mailto:info@uniprep101.com"
                   className="hover:text-primary transition-colors"
@@ -98,7 +98,7 @@ const Footer = () => {
                   info@uniprep101.com
                 </a>
               </p>
-              <p className="text-lg sm:text-base text-white">
+              <p className="text-base sm:text-base text-white">
            
                 <a
                   href="tel:+6565166666"
@@ -120,15 +120,15 @@ const Footer = () => {
                 aria-label="LinkedIn"
               >
                 <svg
-                  width="24"
-                  height="24"
+                  width="20"
+                  height="20"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="w-8 h-8"
+                    className="w-5 h-5"
                 >
                   <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
                   <rect x="2" y="9" width="4" height="12" />
@@ -145,15 +145,15 @@ const Footer = () => {
                 aria-label="Instagram"
               >
                 <svg
-                  width="24"
-                  height="24"
+                  width="20"
+                  height="20"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="w-8 h-8"
+                  className="w-5 h-5"
                 >
                   <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
                   <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
@@ -161,7 +161,7 @@ const Footer = () => {
                 </svg>
               </a>
 
-              {/* Facebook */}
+             
 
             </div>
           </div>
@@ -169,19 +169,19 @@ const Footer = () => {
 
         {/* Copyright and Legal Links */}
         <div className=" pt-4 sm:pt-0 text-center">
-          <p className="text-lg sm:text-base text-white mb-2">
+          <p className="text-sm sm:text-base text-white mb-0">
             © 2025 Uniprep101. All rights reserved.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
             <Link
               href="/privacy-policy"
-              className="text-lg sm:text-sm text-white hover:text-primary transition-colors"
+              className="text-sm text-white hover:text-primary transition-colors"
             >
               Privacy Policy
             </Link>
             <Link
               href="/terms-of-service"
-              className="text-lg sm:text-sm text-white hover:text-primary transition-colors"
+              className="text-sm text-white hover:text-primary transition-colors"
             >
               Terms of Service
             </Link>
